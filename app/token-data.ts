@@ -26,7 +26,7 @@ const renameRules: [string | RegExp, string][] = [
   ["color/static/inverse", "color/text/contrast/inverse"],
   ["color/static/default", "color/text/contrast/default"],
   ["color/feedback/warning/main", "color/feedback/warning/base"],
-  ["color/feedback/information/main", "color/feedback/info/base"],
+  ["color/feedback/info/main", "color/feedback/info/base"],
 ];
 
 export function canonicalName(name: string) {
