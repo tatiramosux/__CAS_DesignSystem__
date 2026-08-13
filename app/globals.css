@@ -22,7 +22,7 @@ main{min-height:100vh;margin-left:var(--side);padding:calc(var(--top) + 48px) cl
 @media(max-width:520px){.hero h1{font-size:40px}.hero-actions{flex-direction:column}.hero-actions button{width:100%}.feature-grid,.check-grid,.component-catalog{grid-template-columns:1fr}.palette,.collection-strip{grid-template-columns:repeat(2,1fr)}.page-heading{margin-bottom:36px}.type-specimen{padding:24px}.type-specimen h2{font-size:34px}.foundation-row{padding:8px}.foundation-row code,.foundation-row span{font-size:12px}.scale-gallery article{grid-template-columns:70px 1fr auto;gap:10px}.top-actions select{width:126px}}
 
 /* Button is bound to the CAS Figma component contract. */
-.cas-button{border-radius:4px;font-weight:600}
+.cas-button{border-radius:6px;font-weight:600}
 .cas-button--disabled{background:var(--button-soft);border-color:var(--button-soft)}
 .cas-button--outline.cas-button--disabled{background:transparent;border-color:var(--stroke-subtle)}
 .featured-component{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:28px;margin-bottom:48px;border:1px solid var(--stroke-subtle);border-radius:3px}
