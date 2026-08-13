@@ -37,7 +37,7 @@ function Overview({ setPage, theme }: { setPage: (p: Page) => void; theme: Theme
       <p className="eyebrow">CAS DESIGN SYSTEM · V1.0</p>
       <h1>Build consistent products,<br /><span>faster.</span></h1>
       <p className="lead">A shared language for designers and developers to create accessible, theme-ready CarBrain experiences with confidence.</p>
-      <div className="hero-actions"><Button size="large" onClick={() => setPage("governance")}>Explore foundations</Button><Button size="large" buttonType="neutral" treatment="outline" onClick={() => setPage("components")}>Browse components</Button></div>
+      <div className="hero-actions"><Button size="large" trailingIcon onClick={() => setPage("governance")}>Explore foundations</Button><Button size="large" buttonType="secondary" treatment="outline" trailingIcon onClick={() => setPage("components")}>Browse components</Button></div>
       <div className="theme-demo" aria-label="Theme architecture">
         <div><span>Semantic token</span><strong>color/action/primary/base</strong></div><i><FontAwesomeIcon icon={faArrowRight} /></i>
         <div><span>Current mode</span><strong>{themes.find(item => item.id === theme)?.label}</strong></div><i><FontAwesomeIcon icon={faArrowRight} /></i>
@@ -45,9 +45,9 @@ function Overview({ setPage, theme }: { setPage: (p: Page) => void; theme: Theme
       </div>
     </section>
     <section className="section-block"><p className="eyebrow">EXPLORE THE SYSTEM</p><h2>One system, two crafts.</h2><div className="feature-grid">
-      <article><span className="feature-number">01</span><h3>Foundations</h3><p>Governance, tokens, color, type, spacing, radius, grid, iconography, and accessibility.</p><button onClick={() => setPage("governance")}>Read the foundations <FontAwesomeIcon icon={faArrowRight} /></button></article>
-      <article><span className="feature-number">02</span><h3>Components</h3><p>Reusable interface building blocks documented with usage, anatomy, specs, accessibility, and code.</p><button onClick={() => setPage("components")}>Open the component index <FontAwesomeIcon icon={faArrowRight} /></button></article>
-      <article><span className="feature-number">03</span><h3>Patterns</h3><p>Approved component combinations that solve recurring product flows and user goals.</p><button onClick={() => setPage("patterns")}>Explore patterns <FontAwesomeIcon icon={faArrowRight} /></button></article>
+      <article><span className="feature-number">01</span><h3>Foundations</h3><p>Governance, tokens, color, type, spacing, radius, grid, iconography, and accessibility.</p><Button buttonType="secondary" treatment="outline" size="small" trailingIcon onClick={() => setPage("governance")}>Read foundations</Button></article>
+      <article><span className="feature-number">02</span><h3>Components</h3><p>Reusable interface building blocks documented with usage, anatomy, specs, accessibility, and code.</p><Button buttonType="secondary" treatment="outline" size="small" trailingIcon onClick={() => setPage("components")}>Open components</Button></article>
+      <article><span className="feature-number">03</span><h3>Patterns</h3><p>Approved component combinations that solve recurring product flows and user goals.</p><Button buttonType="secondary" treatment="outline" size="small" trailingIcon onClick={() => setPage("patterns")}>Explore patterns</Button></article>
     </div></section>
   </>;
 }
