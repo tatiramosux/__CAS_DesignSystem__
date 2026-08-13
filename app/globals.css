@@ -35,3 +35,16 @@ main{min-height:100vh;margin-left:var(--side);padding:calc(var(--top) + 48px) cl
 .feature-grid .cas-button--outline{background:transparent;color:var(--button-base)}
 .feature-grid .cas-button--outline:hover{background:var(--button-soft);border-color:var(--button-hover);color:var(--button-hover)}
 @media(max-width:900px){.featured-component{grid-template-columns:1fr}.button-token-grid{grid-template-columns:1fr}}
+
+/* Component index cards only become links when their documentation page exists. */
+.component-card{display:grid;gap:8px;min-height:118px;padding:14px;appearance:none;background:var(--surface);border:1px solid var(--stroke-subtle);border-radius:3px;text-align:left;color:inherit;font:inherit}
+.component-card strong{color:var(--text-strong);font-size:12px}
+.component-card p{margin:0;color:var(--text-muted);font-size:12px}
+.component-card span{align-self:end;justify-self:start;padding:3px 6px;background:var(--accent-soft);border-radius:3px;color:var(--action);font-size:12px;font-weight:800;text-transform:uppercase}
+.component-card.is-linked{cursor:pointer}
+.component-card.is-linked:hover{border-color:var(--action);background:var(--accent-soft)}
+.component-card.is-linked:focus-visible{outline:2px solid var(--action);outline-offset:2px}
+
+/* Keep specification copy muted without overriding the Button label token. */
+.button-size-specs article>span{color:var(--text-muted)}
+.button-size-specs .cas-button>span{color:inherit}

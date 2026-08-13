@@ -104,11 +104,9 @@ function ScalePage({ type }: { type: "units" | "radius" | "grid" }) {
 }
 
 function ComponentIndex({ setPage }: { setPage: (page: Page) => void }) {
-  const catalog = ["Alerts","Avatars","Badges","Buttons","Breadcrumbs","Checkbox","Dropdown","Loading","Divider","Pagination","Progress Indicators","Radio Button","Rating","Scroll","Sidebar","Stepper","Switch","Table","Tabs","Text Area","Text Input","Tooltip","Toggle Button"].map(name => ({ name, status: "Ready" }));
-  const review = ["Accordion","Cards","ComboBox","Dialog","Navigation Menu","Pill"].map(name => ({ name, status: "Under review" }));
+  const catalog = ["Alerts","Avatars","Badges","Buttons","Breadcrumbs","Checkbox","Dropdown","Loading","Divider","Pagination","Progress Indicators","Radio Button","Rating","Scroll","Sidebar","Stepper","Switch","Table","Tabs","Text Area","Text Input","Tooltip","Toggle Button"];
   return <><PageHeader eyebrow="COMPONENTS · INDEX" title="Components" description="Reusable CAS interface elements aligned between Figma and React. Each page documents behavior, variants, tokens, accessibility, and implementation." />
-    <section className="featured-component"><div><p className="section-index">FEATURED COMPONENT</p><h2>Button</h2><p>Review the exact 90-variant Figma contract, interactive states, token bindings, typography, geometry, and React API.</p><Button trailingIcon onClick={() => setPage("buttons")}>Open Button</Button></div><div className="featured-component__preview"><Button size="large">Primary</Button><Button buttonType="secondary" treatment="outline">Secondary</Button><Button buttonType="danger" size="small">Danger</Button></div></section>
-    <section className="section-block"><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} ready components</h2><div className="component-catalog">{[...catalog,...review].map(item=><article key={item.name}><strong>{item.name}</strong><p>CAS component library</p><span className={item.status === "Ready" ? "" : "review"}>{item.status}</span></article>)}</div></section></>;
+    <section><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} components</h2><p className="wide-copy">Cards become interactive when their documentation page is available in this library.</p><div className="component-catalog">{catalog.map(name => name === "Buttons" ? <button className="component-card is-linked" key={name} onClick={() => setPage("buttons")}><strong>{name}</strong><p>CAS component library</p><span>Documentation ready</span></button> : <article className="component-card" key={name}><strong>{name}</strong><p>CAS component library</p></article>)}</div></section></>;
 }
 
 function Buttons() {
