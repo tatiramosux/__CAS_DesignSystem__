@@ -35,9 +35,14 @@ export function Button({
   const Component = asChild ? Slot : "button";
   const isLoading = state === "loading";
   const isDisabled = disabled || state === "disabled" || isLoading;
+  const resolvedTreatment: CASButtonTreatment = buttonType === "neutral"
+    ? "outline"
+    : buttonType === "secondary"
+      ? treatment
+      : "solid";
   return (
     <Component
-      className={cn("cas-button", `cas-button--${buttonType}`, `cas-button--${size}`, `cas-button--${state}`, `cas-button--${treatment}`, className)}
+      className={cn("cas-button", `cas-button--${buttonType}`, `cas-button--${size}`, `cas-button--${state}`, `cas-button--${resolvedTreatment}`, className)}
       disabled={!asChild ? isDisabled : undefined}
       aria-disabled={isDisabled || undefined}
       aria-busy={isLoading || undefined}

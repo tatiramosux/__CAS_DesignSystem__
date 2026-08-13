@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowUpRightFromSquare, faBars, faChevronLeft, faChevronRight, faMagnifyingGlass, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { audit, collectionSummary, cssVariables, grids, migrations, paletteGroups, radii, semanticTokens, themes, typography, units, type ThemeId } from "./token-data";
 
-type Page = "overview" | "governance" | "tokens" | "color" | "typography" | "units" | "radius" | "grid" | "components" | "patterns" | "resources";
+type Page = "overview" | "governance" | "tokens" | "color" | "typography" | "units" | "radius" | "grid" | "components" | "buttons" | "patterns" | "resources";
 
 const nav = [
   { label: "Getting Started", mark: "01", items: [{ id: "overview", label: "Overview" }] },
@@ -15,7 +15,7 @@ const nav = [
     { id: "color", label: "Color" }, { id: "typography", label: "Typography" },
     { id: "units", label: "Spacing & units" }, { id: "radius", label: "Radius" }, { id: "grid", label: "Grid & layout" },
   ] },
-  { label: "Components", mark: "03", items: [{ id: "components", label: "Component index" }] },
+  { label: "Components", mark: "03", items: [{ id: "components", label: "Component index" }, { id: "buttons", label: "Buttons" }] },
   { label: "Patterns", mark: "04", items: [{ id: "patterns", label: "Pattern index" }] },
   { label: "Resources", mark: "05", items: [{ id: "resources", label: "Libraries & tools" }] },
 ] as const;
@@ -103,7 +103,15 @@ function ScalePage({ type }: { type: "units" | "radius" | "grid" }) {
   return <><PageHeader eyebrow={`FOUNDATIONS · ${title.toUpperCase()}`} title={title} description={type === "units" ? "The base numeric scale shared by spacing, sizing, typography, and layout decisions." : "Corner-radius values available for component and surface geometry."} /><div className={`scale-gallery ${type}`}>{items.map(token => <article key={token.name}><div style={type === "units" ? { width: `${Math.min(Number(token.value), 160)}px` } : { borderRadius: `${Math.min(Number(token.value), 40)}px` }}></div><code>{token.name}</code><span>{token.value}px</span></article>)}</div></>;
 }
 
-function Components() {
+function ComponentIndex({ setPage }: { setPage: (page: Page) => void }) {
+  const catalog = ["Alerts","Avatars","Badges","Buttons","Breadcrumbs","Checkbox","Dropdown","Loading","Divider","Pagination","Progress Indicators","Radio Button","Rating","Scroll","Sidebar","Stepper","Switch","Table","Tabs","Text Area","Text Input","Tooltip","Toggle Button"].map(name => ({ name, status: "Ready" }));
+  const review = ["Accordion","Cards","ComboBox","Dialog","Navigation Menu","Pill"].map(name => ({ name, status: "Under review" }));
+  return <><PageHeader eyebrow="COMPONENTS · INDEX" title="Components" description="Reusable CAS interface elements aligned between Figma and React. Each page documents behavior, variants, tokens, accessibility, and implementation." />
+    <section className="featured-component"><div><p className="section-index">FEATURED COMPONENT</p><h2>Button</h2><p>Review the exact 90-variant Figma contract, interactive states, token bindings, typography, geometry, and React API.</p><Button trailingIcon onClick={() => setPage("buttons")}>Open Button</Button></div><div className="featured-component__preview"><Button size="large">Primary</Button><Button buttonType="secondary" treatment="outline">Secondary</Button><Button buttonType="danger" size="small">Danger</Button></div></section>
+    <section className="section-block"><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} ready components</h2><div className="component-catalog">{[...catalog,...review].map(item=><article key={item.name}><strong>{item.name}</strong><p>CAS component library</p><span className={item.status === "Ready" ? "" : "review"}>{item.status}</span></article>)}</div></section></>;
+}
+
+function Buttons() {
   const [buttonType, setButtonType] = useState<CASButtonType>("primary");
   const [buttonSize, setButtonSize] = useState<CASButtonSize>("medium");
   const [buttonState, setButtonState] = useState<CASButtonState>("default");
@@ -111,19 +119,27 @@ function Components() {
   const types: CASButtonType[] = ["primary","secondary","tertiary","danger","neutral"];
   const sizes: CASButtonSize[] = ["large","medium","small"];
   const states: CASButtonState[] = ["default","hover","focus","loading","disabled"];
-  const catalog = ["Alerts","Avatars","Badges","Buttons","Breadcrumbs","Checkbox","Dropdown","Loading","Divider","Pagination","Progress Indicators","Radio Button","Rating","Scroll","Sidebar","Stepper","Switch","Table","Tabs","Text Area","Text Input","Tooltip","Toggle Button"].map(name => ({ name, status: "Ready" }));
-  const review = ["Accordion","Cards","ComboBox","Dialog","Navigation Menu","Pill"].map(name => ({ name, status: "Under review" }));
+  const groups: { type: CASButtonType; treatment: CASButtonTreatment; label: string }[] = [
+    { type: "primary", treatment: "solid", label: "Primary · Solid" },
+    { type: "secondary", treatment: "solid", label: "Secondary · Solid" },
+    { type: "tertiary", treatment: "solid", label: "Tertiary · Solid" },
+    { type: "danger", treatment: "solid", label: "Danger · Solid" },
+    { type: "secondary", treatment: "outline", label: "Secondary · Outline" },
+    { type: "neutral", treatment: "outline", label: "Neutral · Outline" },
+  ];
+  const treatmentLocked = buttonType !== "secondary";
+  const activeTreatment = buttonType === "neutral" ? "outline" : buttonType === "secondary" ? buttonTreatment : "solid";
   return <><PageHeader eyebrow="COMPONENTS · BUTTON" title="Button" description="Actions from the CAS Figma component set, mapped to React with the same type, size, state, treatment, label, and icon properties." />
     <section className="button-playground"><div className="component-preview"><div className="preview-bar"><span>Interactive preview</span><span>CarBrain · current theme</span></div><div className="button-showcase"><Button buttonType={buttonType} size={buttonSize} state={buttonState} treatment={buttonTreatment} leadingIcon trailingIcon>Button</Button></div></div><aside className="button-controls">
       <label>Type<select value={buttonType} onChange={e=>setButtonType(e.target.value as CASButtonType)}>{types.map(x=><option key={x}>{x}</option>)}</select></label>
       <label>Size<select value={buttonSize} onChange={e=>setButtonSize(e.target.value as CASButtonSize)}>{sizes.map(x=><option key={x}>{x}</option>)}</select></label>
       <label>State<select value={buttonState} onChange={e=>setButtonState(e.target.value as CASButtonState)}>{states.map(x=><option key={x}>{x}</option>)}</select></label>
-      <label>Treatment<select value={buttonTreatment} onChange={e=>setButtonTreatment(e.target.value as CASButtonTreatment)}><option value="solid">solid</option><option value="outline">outline</option></select></label>
+      <label>Treatment<select value={activeTreatment} disabled={treatmentLocked} onChange={e=>setButtonTreatment(e.target.value as CASButtonTreatment)}><option value="solid">solid</option><option value="outline">outline</option></select></label>
     </aside></section>
-    <section className="section-block"><p className="section-index">VARIANTS & STATES</p><h2>Figma component matrix</h2><div className="button-matrix"><div className="button-matrix__head"><span>Type</span>{states.map(state=><span key={state}>{state}</span>)}</div>{types.map(type=><div className="button-matrix__row" key={type}><strong>{type}</strong>{states.map(state=><div key={state}><Button buttonType={type} size="small" state={state} treatment={type === "neutral" ? "outline" : "solid"}>Button</Button></div>)}</div>)}</div></section>
+    <section className="section-block"><p className="section-index">90 FIGMA VARIANTS</p><h2>Six supported styles × three sizes × five states</h2><p className="wide-copy">The Figma component does not support every Type × Solid combination. Primary, Tertiary, and Danger are Solid; Neutral is Outline; Secondary supports both treatments.</p><div className="button-matrix"><div className="button-matrix__head"><span>Style</span>{states.map(state=><span key={state}>{state}</span>)}</div>{groups.map(group=><div className="button-matrix__row" key={group.label}><strong>{group.label}</strong>{states.map(state=><div key={state}><Button buttonType={group.type} size="small" state={state} treatment={group.treatment}>Button</Button></div>)}</div>)}</div></section>
     <section className="section-block"><p className="section-index">SIZE</p><h2>Three fixed heights</h2><div className="button-size-specs">{sizes.map(size=><article key={size}><Button size={size} leadingIcon trailingIcon>Button</Button><strong>{size}</strong><span>{size === "large" ? "56 px" : size === "medium" ? "48 px" : "40 px"}</span></article>)}</div></section>
-    <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Type · Primary, Secondary, Tertiary, Danger, Neutral","Size · Large (56), Medium (48), Small (40)","State · Default, Hover, Focus, Loading, Disabled","Treatment · Solid, Outline","Label · Editable text","Icon Leading · Boolean + instance swap","Icon Trailing · Boolean + instance swap"].map((x,i)=><div key={x}><span>{String(i+1).padStart(2,"0")}</span>{x}</div>)}</div></section>
-    <section className="section-block"><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} ready components</h2><div className="component-catalog">{[...catalog,...review].map(item=><article key={item.name}><strong>{item.name}</strong><p>CAS component library</p><span className={item.status === "Ready" ? "" : "review"}>{item.status}</span></article>)}</div></section></>;
+    <section className="section-block"><p className="section-index">TOKENS & TYPOGRAPHY</p><h2>Implementation bindings</h2><div className="button-token-grid">{[["Primary", "color/action/primary/{base, dark, lighter}"], ["Secondary", "color/action/secondary/{base, dark, lighter}"], ["Tertiary", "color/action/tertiary/{base, dark, lighter}"], ["Danger", "color/feedback/error/{base, dark, lighter}"], ["Neutral", "color/action/neutral/{base, dark, lighter}"], ["Label", "Nunito Sans · 14 px · Semibold 600"], ["Small label", "Nunito Sans · 12 px · Semibold 600"], ["Shape", "radius/full · 999 px"]].map(([label, value])=><article key={label}><strong>{label}</strong><code>{value}</code></article>)}</div></section>
+    <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Type · Primary, Secondary, Tertiary, Danger, Neutral","Size · Large (56), Medium (48), Small (40)","State · Default, Hover, Focus, Loading, Disabled","Treatment · Solid or Outline where supported","Label · Editable text","Icon Leading · Boolean + instance swap","Icon Trailing · Boolean + instance swap"].map((x,i)=><div key={x}><span>{String(i+1).padStart(2,"0")}</span>{x}</div>)}</div></section></>;
 }
 
 function Placeholder({ type }: { type: "Patterns" | "Resources" }) {
@@ -144,6 +160,6 @@ export default function Home() {
   return <div className={`app ${collapsed ? "is-collapsed" : ""}`} style={cssVariables(theme) as CSSProperties}>
     <header className="topbar"><button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle navigation"><FontAwesomeIcon icon={faBars} /></button><button className="brand" onClick={() => go("overview")} aria-label="CAS Design System home"><img src="/CAS-logo.svg" alt="CAS" /><b>Design System</b><small>v1.0</small></button><div className="search-wrap"><FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} /><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search the system" aria-label="Search the system" />{matches.length > 0 && <div className="search-results">{matches.map(x=><button key={x.id} onClick={()=>go(x.id)}>{x.label}<span>Open <FontAwesomeIcon icon={faArrowRight} /></span></button>)}</div>}</div><div className="top-actions"><a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=12-4" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a><select value={theme} onChange={e=>setTheme(e.target.value as ThemeId)} aria-label="Select theme">{themes.map(t=><option key={t.id} value={t.id}>{t.label}</option>)}</select></div></header>
     <aside className={`sidebar ${mobileOpen ? "mobile-open" : ""}`}><nav>{nav.map(group=><div className="nav-group" key={group.label}><button className="nav-title" onClick={()=>{ if(collapsed) setCollapsed(false); else go(group.items[0].id); }}><span>{group.mark}</span><b>{group.label}</b></button><div className="nav-items">{group.items.map(item=><button key={item.id} className={page===item.id?"active":""} onClick={()=>go(item.id)}><FontAwesomeIcon icon={faSquare} />{item.label}</button>)}</div></div>)}</nav><button className="collapse" onClick={()=>setCollapsed(!collapsed)}>{collapsed ? <FontAwesomeIcon icon={faChevronRight} /> : <><FontAwesomeIcon icon={faChevronLeft} /> Collapse</>}</button></aside>
-    <main>{page === "overview" && <Overview setPage={go} theme={theme} />}{page === "governance" && <Governance />}{page === "tokens" && <Tokens theme={theme} />}{page === "color" && <Color />}{page === "typography" && <Typography />}{page === "units" && <ScalePage type="units" />}{page === "radius" && <ScalePage type="radius" />}{page === "grid" && <ScalePage type="grid" />}{page === "components" && <Components />}{page === "patterns" && <Placeholder type="Patterns" />}{page === "resources" && <Placeholder type="Resources" />}<footer><span>CAS Design System</span><span>English · Figma Variables source · 2026</span></footer></main>
+    <main>{page === "overview" && <Overview setPage={go} theme={theme} />}{page === "governance" && <Governance />}{page === "tokens" && <Tokens theme={theme} />}{page === "color" && <Color />}{page === "typography" && <Typography />}{page === "units" && <ScalePage type="units" />}{page === "radius" && <ScalePage type="radius" />}{page === "grid" && <ScalePage type="grid" />}{page === "components" && <ComponentIndex setPage={go} />}{page === "buttons" && <Buttons />}{page === "patterns" && <Placeholder type="Patterns" />}{page === "resources" && <Placeholder type="Resources" />}<footer><span>CAS Design System</span><span>English · Figma Variables source · 2026</span></footer></main>
   </div>;
 }
