@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Nunito_Sans, Paytone_One } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const sans = Geist({ variable: "--font-sans", subsets: ["latin"] });
+const heading = Paytone_One({ variable: "--font-heading", subsets: ["latin"], weight: "400" });
+const body = Nunito_Sans({ variable: "--font-body", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -22,5 +23,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${sans.variable} ${mono.variable}`}>{children}</body></html>;
+  return <html lang="en"><body className={`${heading.variable} ${body.variable} ${mono.variable}`}>{children}</body></html>;
 }
