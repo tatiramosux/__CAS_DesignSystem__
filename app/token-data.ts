@@ -130,6 +130,12 @@ const cssTokenMap: Record<string, string> = {
   "--text-strong": "color/text/strong", "--text-default": "color/text/default", "--text-muted": "color/text/muted", "--text-inverse": "color/text/inverse",
   "--stroke-subtle": "color/stroke/subtle", "--stroke-default": "color/stroke/defaukt", "--action": "color/action/primary/base", "--action-hover": "color/action/primary/dark",
   "--accent": "color/action/secondary/base", "--accent-soft": "color/action/secondary/lighter", "--success": "color/feedback/sucess/base", "--danger": "color/feedback/error/base",
+  "--action-primary-lighter": "color/action/primary/lighter", "--action-primary-light": "color/action/primary/light", "--action-primary-base": "color/action/primary/base", "--action-primary-dark": "color/action/primary/dark", "--action-primary-darker": "color/action/primary/darker",
+  "--action-secondary-lighter": "color/action/secondary/lighter", "--action-secondary-light": "color/action/secondary/light", "--action-secondary-base": "color/action/secondary/base", "--action-secondary-dark": "color/action/secondary/dark", "--action-secondary-darker": "color/action/secondary/darker",
+  "--action-tertiary-lighter": "color/action/tertiary/lighter", "--action-tertiary-light": "color/action/tertiary/light", "--action-tertiary-base": "color/action/tertiary/base", "--action-tertiary-dark": "color/action/tertiary/dark", "--action-tertiary-darker": "color/action/tertiary/darker",
+  "--action-neutral-lighter": "color/action/neutral/lighter", "--action-neutral-light": "color/action/neutral/light", "--action-neutral-base": "color/action/neutral/base", "--action-neutral-dark": "color/action/neutral/dark", "--action-neutral-darker": "color/action/neutral/darker",
+  "--feedback-error-lighter": "color/feedback/error/lighter", "--feedback-error-light": "color/feedback/error/light", "--feedback-error-base": "color/feedback/error/base", "--feedback-error-dark": "color/feedback/error/dark",
+  "--button-text-inverse": "color/text/inverse", "--button-text-disabled": "color/text/disable", "--button-stroke-default": "color/stroke/defaukt", "--button-stroke-strong": "color/stroke/strong",
 };
 
 export function cssVariables(theme: ThemeId): Record<string, string> {

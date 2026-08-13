@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, type CASButtonSize, type CASButtonState, type CASButtonTreatment, type CASButtonType } from "@/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowUpRightFromSquare, faBars, faChevronLeft, faChevronRight, faMagnifyingGlass, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { audit, collectionSummary, cssVariables, grids, migrations, paletteGroups, radii, semanticTokens, themes, typography, units, type ThemeId } from "./token-data";
@@ -37,7 +37,7 @@ function Overview({ setPage, theme }: { setPage: (p: Page) => void; theme: Theme
       <p className="eyebrow">CAS DESIGN SYSTEM · V1.0</p>
       <h1>Build consistent products,<br /><span>faster.</span></h1>
       <p className="lead">A shared language for designers and developers to create accessible, theme-ready CarBrain experiences with confidence.</p>
-      <div className="hero-actions"><Button size="lg" onClick={() => setPage("governance")}>Explore foundations</Button><Button size="lg" variant="secondary" onClick={() => setPage("components")}>Browse components</Button></div>
+      <div className="hero-actions"><Button size="large" onClick={() => setPage("governance")}>Explore foundations</Button><Button size="large" buttonType="neutral" treatment="outline" onClick={() => setPage("components")}>Browse components</Button></div>
       <div className="theme-demo" aria-label="Theme architecture">
         <div><span>Semantic token</span><strong>color/action/primary/base</strong></div><i><FontAwesomeIcon icon={faArrowRight} /></i>
         <div><span>Current mode</span><strong>{themes.find(item => item.id === theme)?.label}</strong></div><i><FontAwesomeIcon icon={faArrowRight} /></i>
@@ -104,9 +104,26 @@ function ScalePage({ type }: { type: "units" | "radius" | "grid" }) {
 }
 
 function Components() {
+  const [buttonType, setButtonType] = useState<CASButtonType>("primary");
+  const [buttonSize, setButtonSize] = useState<CASButtonSize>("medium");
+  const [buttonState, setButtonState] = useState<CASButtonState>("default");
+  const [buttonTreatment, setButtonTreatment] = useState<CASButtonTreatment>("solid");
+  const types: CASButtonType[] = ["primary","secondary","tertiary","danger","neutral"];
+  const sizes: CASButtonSize[] = ["large","medium","small"];
+  const states: CASButtonState[] = ["default","hover","focus","loading","disabled"];
   const catalog = ["Alerts","Avatars","Badges","Buttons","Breadcrumbs","Checkbox","Dropdown","Loading","Divider","Pagination","Progress Indicators","Radio Button","Rating","Scroll","Sidebar","Stepper","Switch","Table","Tabs","Text Area","Text Input","Tooltip","Toggle Button"].map(name => ({ name, status: "Ready" }));
   const review = ["Accordion","Cards","ComboBox","Dialog","Navigation Menu","Pill"].map(name => ({ name, status: "Under review" }));
-  return <><PageHeader eyebrow="COMPONENTS · INDEX" title="Components" description="The component catalog currently available in the CAS Figma library. Ready items can be documented and mapped to React; items under review should not be treated as stable contracts." /><div className="component-layout"><section className="component-preview"><div className="preview-bar"><span>Button · live React mapping</span><button>CarBrain · Light</button></div><div className="button-showcase"><Button>Primary action</Button><Button variant="secondary">Secondary</Button><Button variant="outline">Outlined</Button></div></section><aside className="component-template"><p className="section-index">COMPONENT PAGE TEMPLATE</p>{["Overview","Playground","Usage","Anatomy","Variants & states","Specs","Accessibility","Code","Changelog"].map((x,i)=><div key={x}><span>{String(i+1).padStart(2,"0")}</span>{x}</div>)}</aside></div><section className="section-block"><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} ready components</h2><div className="component-catalog">{[...catalog,...review].map(item=><article key={item.name}><strong>{item.name}</strong><p>CAS component library</p><span className={item.status === "Ready" ? "" : "review"}>{item.status}</span></article>)}</div></section></>;
+  return <><PageHeader eyebrow="COMPONENTS · BUTTON" title="Button" description="Actions from the CAS Figma component set, mapped to React with the same type, size, state, treatment, label, and icon properties." />
+    <section className="button-playground"><div className="component-preview"><div className="preview-bar"><span>Interactive preview</span><span>CarBrain · current theme</span></div><div className="button-showcase"><Button buttonType={buttonType} size={buttonSize} state={buttonState} treatment={buttonTreatment} leadingIcon trailingIcon>Button</Button></div></div><aside className="button-controls">
+      <label>Type<select value={buttonType} onChange={e=>setButtonType(e.target.value as CASButtonType)}>{types.map(x=><option key={x}>{x}</option>)}</select></label>
+      <label>Size<select value={buttonSize} onChange={e=>setButtonSize(e.target.value as CASButtonSize)}>{sizes.map(x=><option key={x}>{x}</option>)}</select></label>
+      <label>State<select value={buttonState} onChange={e=>setButtonState(e.target.value as CASButtonState)}>{states.map(x=><option key={x}>{x}</option>)}</select></label>
+      <label>Treatment<select value={buttonTreatment} onChange={e=>setButtonTreatment(e.target.value as CASButtonTreatment)}><option value="solid">solid</option><option value="outline">outline</option></select></label>
+    </aside></section>
+    <section className="section-block"><p className="section-index">VARIANTS & STATES</p><h2>Figma component matrix</h2><div className="button-matrix"><div className="button-matrix__head"><span>Type</span>{states.map(state=><span key={state}>{state}</span>)}</div>{types.map(type=><div className="button-matrix__row" key={type}><strong>{type}</strong>{states.map(state=><div key={state}><Button buttonType={type} size="small" state={state} treatment={type === "neutral" ? "outline" : "solid"}>Button</Button></div>)}</div>)}</div></section>
+    <section className="section-block"><p className="section-index">SIZE</p><h2>Three fixed heights</h2><div className="button-size-specs">{sizes.map(size=><article key={size}><Button size={size} leadingIcon trailingIcon>Button</Button><strong>{size}</strong><span>{size === "large" ? "56 px" : size === "medium" ? "48 px" : "40 px"}</span></article>)}</div></section>
+    <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Type · Primary, Secondary, Tertiary, Danger, Neutral","Size · Large (56), Medium (48), Small (40)","State · Default, Hover, Focus, Loading, Disabled","Treatment · Solid, Outline","Label · Editable text","Icon Leading · Boolean + instance swap","Icon Trailing · Boolean + instance swap"].map((x,i)=><div key={x}><span>{String(i+1).padStart(2,"0")}</span>{x}</div>)}</div></section>
+    <section className="section-block"><p className="section-index">FIGMA LIBRARY</p><h2>{catalog.length} ready components</h2><div className="component-catalog">{[...catalog,...review].map(item=><article key={item.name}><strong>{item.name}</strong><p>CAS component library</p><span className={item.status === "Ready" ? "" : "review"}>{item.status}</span></article>)}</div></section></>;
 }
 
 function Placeholder({ type }: { type: "Patterns" | "Resources" }) {
