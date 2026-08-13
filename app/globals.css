@@ -48,3 +48,27 @@ main{min-height:100vh;margin-left:var(--side);padding:calc(var(--top) + 48px) cl
 /* Keep specification copy muted without overriding the Button label token. */
 .button-size-specs article>span{color:var(--text-muted)}
 .button-size-specs .cas-button>span{color:inherit}
+
+/* Surface geometry: cards use radius/12 and doubled 2 px structural strokes. */
+.sidebar{border-right-width:2px}
+.collapse{border-top-width:2px}
+.theme-demo,
+.feature-grid article,
+.architecture article,
+.mode-list span,
+.collection-strip article,
+.token-table,
+.foundation-table,
+.migration-list,
+.check-grid,
+.guidance-grid article,
+.scale-gallery article,
+.grid-preview article,
+.component-preview,
+.component-template,
+.component-card,
+.button-controls,
+.button-matrix,
+.button-size-specs article,
+.button-token-grid,
+.empty-state{border-width:2px;border-radius:12px}
