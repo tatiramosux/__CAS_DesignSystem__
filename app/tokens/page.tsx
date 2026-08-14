@@ -17,7 +17,7 @@ export default function Tokens() {
     <>
       <PageHeader eyebrow="FOUNDATIONS · DESIGN TOKENS" title="Design tokens" description="The canonical catalog generated from the CAS Figma Variables export, with source aliases preserved for governance and migration." />
       <div className="status-note"><span>Figma source</span><strong>{audit.variableCount} variables · {audit.collectionCount} collections · {themes.length} color modes</strong><small>Imported August 12, 2026</small></div>
-      <section className="collection-strip">{collectionSummary.map(collection => <article key={collection.name}><strong>{collection.count}</strong><span>{collection.name.replace(/^\d+ - /, "")}</span><small>{collection.modes.join(" · ")}</small></article>)}</section>
+      <section className="collection-strip">{collectionSummary.map(collection => <article key={collection.name}><strong>{collection.count}</strong><span>{collection.name.replace(/^\d+ - /, "")}</span><small>{collection.name === "2 - Semantic" ? themes.find(t => t.id === theme)?.label : collection.modes.join(" · ")}</small></article>)}</section>
       <section className="section-block">
         <div className="section-toolbar">
           <div><p className="section-index">01 / SEMANTIC TOKENS</p><h2>{themes.find(t => t.id === theme)?.label}</h2></div>

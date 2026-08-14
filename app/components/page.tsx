@@ -4,7 +4,8 @@ import { Badge } from "@/components/ui/badge";
 
 const linkedComponentPages: Partial<Record<string, string>> = { "Buttons": "/components/buttons", "Text Input": "/components/text-input", "Badges": "/components/badges" };
 
-const catalog = ["Alerts", "Avatars", "Badges", "Buttons", "Breadcrumbs", "Checkbox", "Dropdown", "Loading", "Divider", "Pagination", "Progress Indicators", "Radio Button", "Rating", "Scroll", "Sidebar", "Stepper", "Switch", "Table", "Tabs", "Text Area", "Text Input", "Tooltip", "Toggle Button"];
+const catalog = ["Alerts", "Avatars", "Badges", "Buttons", "Breadcrumbs", "Checkbox", "Dropdown", "Loading", "Divider", "Pagination", "Progress Indicators", "Radio Button", "Rating", "Scroll", "Sidebar", "Stepper", "Switch", "Table", "Tabs", "Text Area", "Text Input", "Tooltip", "Toggle Button"]
+  .sort((a, b) => a.localeCompare(b));
 
 export default function ComponentIndex() {
   return (

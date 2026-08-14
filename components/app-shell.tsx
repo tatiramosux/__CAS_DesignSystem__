@@ -17,7 +17,11 @@ const nav: NavGroup[] = [
     { href: "/color", label: "Color" }, { href: "/typography", label: "Typography" },
     { href: "/units", label: "Spacing & units" }, { href: "/radius", label: "Radius" }, { href: "/grid", label: "Grid & layout" },
   ] },
-  { label: "Components", mark: "03", items: [{ href: "/components", label: "Component index" }, { href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }] },
+  { label: "Components", mark: "03", items: [
+    { href: "/components", label: "Component index" },
+    ...[{ href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }]
+      .sort((a, b) => a.label.localeCompare(b.label)),
+  ] },
   { label: "Templates", mark: "04", items: [{ href: "/templates", label: "Templates index" }] },
   { label: "Resources", mark: "05", items: [{ href: "/resources", label: "Libraries & tools" }] },
 ];

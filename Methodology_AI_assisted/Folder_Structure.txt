@@ -1,0 +1,37 @@
+/
+├── README.md
+│
+├── PROJECT_CONTEXT.md
+├── DESIGN_GOVERNANCE.md
+├── DESIGN_GUARD_RAILS.md
+├── CODE_ARCHITECTURE_AND_MIGRATION.md
+│
+└── tokens/
+    └── design-tokens.json
+
+
+First steps:
+
+README
+  ↓
+entende a metodologia
+
+PROJECT_CONTEXT
+  ↓
+entende o contexto e stack
+
+DESIGN_GOVERNANCE
+  ↓
+entende as regras do Design System
+
+DESIGN_GUARD_RAILS
+  ↓
+entende como a IA deve se comportar
+
+CODE_ARCHITECTURE_AND_MIGRATION
+  ↓
+entende como implementar ou migrar
+
+design-tokens.json
+  ↓
+consulta o estado atual dos tokens
