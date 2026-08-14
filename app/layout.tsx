@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Nunito_Sans, Paytone_One } from "next/font/google";
 import { headers } from "next/headers";
+import { AppShell } from "@/components/app-shell";
 import "./globals.css";
 
 const heading = Paytone_One({ variable: "--font-heading", subsets: ["latin"], weight: "400" });
@@ -25,15 +26,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Paytone+One&display=swap"
-        />
-      </head>
-      <body className={`${heading.variable} ${body.variable} ${mono.variable}`}>{children}</body>
+      <body className={`${heading.variable} ${body.variable} ${mono.variable}`}>
+        <AppShell>{children}</AppShell>
+      </body>
     </html>
   );
 }

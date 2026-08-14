@@ -15,8 +15,8 @@
 
 # next.js
 /.next/
-/.vinext/
 /out/
+*.tsbuildinfo
 
 # misc
 .DS_Store
@@ -36,8 +36,3 @@ yarn-error.log*
 
 # claude code local settings
 .claude/settings.local.json
-
-/dist/
-/.wrangler/
-/outputs/
-/work/
