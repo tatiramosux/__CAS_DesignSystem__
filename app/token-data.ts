@@ -13,7 +13,7 @@ const byName = new Map(allVariables.map(variable => [variable.name, variable]));
 
 export const themes: { id: ThemeId; label: string; figmaMode: string }[] = [
   { id: "carbrain-light", label: "CarBrain · Light", figmaMode: "☼ CarBrain - Light" },
-  { id: "carbrain-dark", label: "CarBrain · Dark", figmaMode: " ☾  CarBrain - Dark" },
+  { id: "carbrain-dark", label: "CarBrain · Dark", figmaMode: "☾ CarBrain - Dark" },
   { id: "brandx-light", label: "BrandX · Light", figmaMode: "☼ BrandX - Light" },
 ];
 
@@ -21,12 +21,9 @@ const renameRules: [string | RegExp, string][] = [
   [/^color\/feedback\/sucess\//, "color/feedback/success/"],
   [/^color\/feedback\/information\//, "color/feedback/info/"],
   [/^color\/icons\//, "color/icon/"],
-  ["color/stroke/defaukt", "color/stroke/default"],
   ["color/text/disable", "color/text/disabled"],
   ["color/static/inverse", "color/text/contrast/inverse"],
   ["color/static/default", "color/text/contrast/default"],
-  ["color/feedback/warning/main", "color/feedback/warning/base"],
-  ["color/feedback/info/main", "color/feedback/info/base"],
 ];
 
 export function canonicalName(name: string) {
@@ -98,7 +95,7 @@ const primitiveVariables = rawCollections["1 - Primitives"].variables;
 export const paletteGroups = Object.entries(primitiveVariables.reduce<Record<string, RawVariable[]>>((groups, variable) => {
   const parts = variable.name.split("/");
   const last = parts.at(-1) ?? "";
-  if (!/^\d+$/.test(last) || variable.name.startsWith("Alpha/")) return groups;
+  if (!/^\d+$/.test(last) || variable.name.toLowerCase().startsWith("alpha/")) return groups;
   const family = parts.slice(0, -1).join("/");
   (groups[family] ??= []).push(variable);
   return groups;
@@ -127,15 +124,18 @@ export const grids = rawCollections["6 - Grids"].variables.map(variable => ({
 
 const cssTokenMap: Record<string, string> = {
   "--surface-canvas": "color/background/canvas", "--surface": "color/background/surface", "--surface-subtle": "color/background/subtle", "--surface-strong": "color/background/strong",
-  "--text-strong": "color/text/strong", "--text-default": "color/text/default", "--text-muted": "color/text/muted", "--text-inverse": "color/text/inverse",
-  "--stroke-subtle": "color/stroke/subtle", "--stroke-default": "color/stroke/defaukt", "--action": "color/action/primary/base", "--action-hover": "color/action/primary/dark",
+  "--text-strong": "color/text/strong", "--text-default": "color/text/default", "--text-muted": "color/text/muted", "--text-inverse": "color/text/inverse", "--text-subtle": "color/text/subtle", "--text-disabled": "color/text/disable",
+  "--stroke-subtle": "color/stroke/subtle", "--stroke-default": "color/stroke/default", "--stroke-muted": "color/stroke/muted", "--action": "color/action/primary/base", "--action-hover": "color/action/primary/dark",
   "--accent": "color/action/secondary/base", "--accent-soft": "color/action/secondary/lighter", "--success": "color/feedback/sucess/base", "--danger": "color/feedback/error/base",
   "--action-primary-lighter": "color/action/primary/lighter", "--action-primary-light": "color/action/primary/light", "--action-primary-base": "color/action/primary/base", "--action-primary-dark": "color/action/primary/dark", "--action-primary-darker": "color/action/primary/darker",
   "--action-secondary-lighter": "color/action/secondary/lighter", "--action-secondary-light": "color/action/secondary/light", "--action-secondary-base": "color/action/secondary/base", "--action-secondary-dark": "color/action/secondary/dark", "--action-secondary-darker": "color/action/secondary/darker",
   "--action-tertiary-lighter": "color/action/tertiary/lighter", "--action-tertiary-light": "color/action/tertiary/light", "--action-tertiary-base": "color/action/tertiary/base", "--action-tertiary-dark": "color/action/tertiary/dark", "--action-tertiary-darker": "color/action/tertiary/darker",
   "--action-neutral-lighter": "color/action/neutral/lighter", "--action-neutral-light": "color/action/neutral/light", "--action-neutral-base": "color/action/neutral/base", "--action-neutral-dark": "color/action/neutral/dark", "--action-neutral-darker": "color/action/neutral/darker",
   "--feedback-error-lighter": "color/feedback/error/lighter", "--feedback-error-light": "color/feedback/error/light", "--feedback-error-base": "color/feedback/error/base", "--feedback-error-dark": "color/feedback/error/dark",
-  "--button-text-inverse": "color/text/inverse", "--button-text-disabled": "color/text/disable", "--button-stroke-default": "color/stroke/defaukt", "--button-stroke-strong": "color/stroke/strong",
+  "--feedback-success-lighter": "color/feedback/sucess/lighter", "--feedback-success-light": "color/feedback/sucess/light", "--feedback-success-base": "color/feedback/sucess/base", "--feedback-success-dark": "color/feedback/sucess/dark",
+  "--feedback-warning-lighter": "color/feedback/warning/lighter", "--feedback-warning-light": "color/feedback/warning/light", "--feedback-warning-base": "color/feedback/warning/base", "--feedback-warning-dark": "color/feedback/warning/dark",
+  "--feedback-info-lighter": "color/feedback/information/lighter", "--feedback-info-light": "color/feedback/information/light", "--feedback-info-base": "color/feedback/information/base", "--feedback-info-dark": "color/feedback/information/dark",
+  "--button-text-inverse": "color/text/inverse", "--button-text-disabled": "color/text/disable", "--button-stroke-default": "color/stroke/default", "--button-stroke-strong": "color/stroke/strong",
 };
 
 export function cssVariables(theme: ThemeId): Record<string, string> {
