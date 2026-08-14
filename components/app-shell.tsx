@@ -56,7 +56,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             )}
           </div>
           <div className="top-actions">
-            <a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=1483-8372&t=f1D4dalJv9MCo0x2-1" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
+            <a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=40-147&t=f1D4dalJv9MCo0x2-1" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
             <select value={theme} onChange={e => setTheme(e.target.value as ThemeId)} aria-label="Select theme">
               {themes.map(t => <option key={t.id} value={t.id}>{t.label}</option>)}
             </select>

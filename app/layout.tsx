@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Nunito_Sans, Paytone_One } from "next/font/google";
 import { headers } from "next/headers";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { AppShell } from "@/components/app-shell";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+
+// Prevents a flash of oversized, unstyled icons: without this, fontawesome-svg-core
+// injects its sizing CSS client-side after the SVGs already painted.
+config.autoAddCss = false;
 
 const heading = Paytone_One({ variable: "--font-heading", subsets: ["latin"], weight: "400" });
 const body = Nunito_Sans({ variable: "--font-body", subsets: ["latin"] });

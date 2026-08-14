@@ -54,7 +54,7 @@ test("keeps Figma variables as the canonical local source", async () => {
   ]);
   const variables = JSON.parse(source);
   const count = Object.values(variables).reduce((sum, collection) => sum + collection.variables.length, 0);
-  assert.equal(count, 270);
+  assert.equal(count, 299);
   assert.match(integration, /resolveVariable/);
   assert.match(integration, /carbrain-light/);
   assert.match(integration, /carbrain-dark/);
