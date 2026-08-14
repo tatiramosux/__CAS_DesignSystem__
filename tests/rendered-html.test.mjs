@@ -40,7 +40,7 @@ test("server-renders the CAS documentation shell", async () => {
     assert.match(html, /CarBrain · Light/);
     assert.match(html, /Foundations/);
     assert.match(html, /Components/);
-    assert.match(html, /Patterns/);
+    assert.match(html, /Templates/);
     assert.match(html, /Resources/);
     assert.match(html, /--action:#003B76/);
   });

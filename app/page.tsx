@@ -31,7 +31,7 @@ export default function Overview() {
         <div className="feature-grid">
           <article><span className="feature-number">01</span><h3>Foundations</h3><p>Governance, tokens, color, type, spacing, radius, grid, iconography, and accessibility.</p><Button asChild buttonType="secondary" treatment="outline" size="small" trailingIcon><Link href="/governance">Read foundations</Link></Button></article>
           <article><span className="feature-number">02</span><h3>Components</h3><p>Reusable interface building blocks documented with usage, anatomy, specs, accessibility, and code.</p><Button asChild buttonType="secondary" treatment="outline" size="small" trailingIcon><Link href="/components">Open components</Link></Button></article>
-          <article><span className="feature-number">03</span><h3>Patterns</h3><p>Approved component combinations that solve recurring product flows and user goals.</p><Button asChild buttonType="secondary" treatment="outline" size="small" trailingIcon><Link href="/patterns">Explore patterns</Link></Button></article>
+          <article><span className="feature-number">03</span><h3>Templates</h3><p>Approved page and screen templates that solve recurring product flows and user goals.</p><Button asChild buttonType="secondary" treatment="outline" size="small" trailingIcon><Link href="/templates">Explore templates</Link></Button></article>
         </div>
       </section>
     </>

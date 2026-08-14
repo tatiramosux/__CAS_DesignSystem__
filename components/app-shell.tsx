@@ -18,7 +18,7 @@ const nav: NavGroup[] = [
     { href: "/units", label: "Spacing & units" }, { href: "/radius", label: "Radius" }, { href: "/grid", label: "Grid & layout" },
   ] },
   { label: "Components", mark: "03", items: [{ href: "/components", label: "Component index" }, { href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }] },
-  { label: "Patterns", mark: "04", items: [{ href: "/patterns", label: "Pattern index" }] },
+  { label: "Templates", mark: "04", items: [{ href: "/templates", label: "Templates index" }] },
   { label: "Resources", mark: "05", items: [{ href: "/resources", label: "Libraries & tools" }] },
 ];
 
@@ -56,7 +56,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             )}
           </div>
           <div className="top-actions">
-            <a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=40-147&t=f1D4dalJv9MCo0x2-1" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
+            <a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=1-574&t=f1D4dalJv9MCo0x2-1" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
             <select value={theme} onChange={e => setTheme(e.target.value as ThemeId)} aria-label="Select theme">
               {themes.map(t => <option key={t.id} value={t.id}>{t.label}</option>)}
             </select>

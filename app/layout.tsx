@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = host.includes("localhost") ? "http" : "https";
   const image = `${protocol}://${host}/og.png`;
   const title = "CAS Design System";
-  const description = "Foundations, components, patterns, and resources for building consistent CarBrain products.";
+  const description = "Foundations, components, templates, and resources for building consistent CarBrain products.";
   return {
     title, description,
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },

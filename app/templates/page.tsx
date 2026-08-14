@@ -1,9 +1,9 @@
 import { PageHeader } from "@/components/page-header";
 
-export default function Patterns() {
+export default function Templates() {
   return (
     <>
-      <PageHeader eyebrow="PATTERNS · INDEX" title="Patterns" description="Approved combinations of components and foundations that solve recurring user goals and product flows." />
+      <PageHeader eyebrow="TEMPLATES · INDEX" title="Templates" description="Approved page and screen templates that combine components and foundations to solve recurring user goals and product flows." />
       <section className="empty-state">
         <span>Planned for the next iteration</span>
         <h2>The structure is ready to grow.</h2>
