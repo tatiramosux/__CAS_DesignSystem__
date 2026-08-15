@@ -4,10 +4,12 @@ import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowUpRightFromSquare, faBars, faChevronLeft, faChevronRight, faMagnifyingGlass, faSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowUpRightFromSquare, faBars, faChevronLeft, faChevronRight, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { cssVariables, themes, type ThemeId } from "@/app/token-data";
 import { ThemeContext } from "@/components/theme-context";
 import { Dropdown } from "@/components/ui/dropdown";
+import { SidebarItem } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 
 type NavGroup = { label: string; mark: string; items: { href: string; label: string }[] };
 
@@ -63,6 +65,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeId>("carbrain-light");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const pathname = usePathname();
   const router = useRouter();
@@ -108,20 +111,31 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
         <aside className={`sidebar ${mobileOpen ? "mobile-open" : ""}`}>
-          <nav>
+          <nav className="flex flex-col gap-1 px-1">
             {nav.map(group => (
-              <div className="nav-group" key={group.label}>
-                <button className="nav-title" onClick={() => { if (collapsed) setCollapsed(false); else go(group.items[0].href); }}>
-                  <span>{group.mark}</span><b>{group.label}</b>
-                </button>
-                <div className="nav-items">
-                  {group.items.map(item => (
-                    <Link key={item.href} href={item.href} className={pathname === item.href ? "active" : ""} onClick={() => setMobileOpen(false)}>
-                      <FontAwesomeIcon icon={faSquare} />{item.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <SidebarItem
+                key={group.label}
+                text={group.label}
+                expanded={expandedGroup === group.label}
+                onExpandedChange={next => {
+                  if (collapsed) { setCollapsed(false); return; }
+                  setExpandedGroup(next ? group.label : null);
+                }}
+              >
+                {group.items.map(item => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      "block truncate rounded px-2 py-1.5 font-body text-sm no-underline transition-colors duration-150 hover:bg-[color-mix(in_srgb,var(--action-secondary-base)_8%,transparent)]",
+                      pathname === item.href ? "font-bold text-[var(--action)]" : "font-normal text-[var(--text-muted)]"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </SidebarItem>
             ))}
           </nav>
           <button className="collapse" onClick={() => setCollapsed(!collapsed)}>

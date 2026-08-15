@@ -50,11 +50,16 @@ export interface SidebarItemProps {
   /** Nested sub-items shown indented below, toggled open/closed via the trailing chevron. */
   children?: React.ReactNode;
   defaultExpanded?: boolean;
+  /** Controlled expand state — omit to let the item manage it internally (uncontrolled). */
+  expanded?: boolean;
+  onExpandedChange?: (expanded: boolean) => void;
   className?: string;
 }
 
-export function SidebarItem({ text, icon, size = "md", state = "default", showChevron = true, collapsed = false, children, defaultExpanded = false, className }: SidebarItemProps) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
+export function SidebarItem({ text, icon, size = "md", state = "default", showChevron = true, collapsed = false, children, defaultExpanded = false, expanded: expandedProp, onExpandedChange, className }: SidebarItemProps) {
+  const [internalExpanded, setInternalExpanded] = useState(defaultExpanded);
+  const expanded = expandedProp ?? internalExpanded;
+  const toggleExpanded = () => (onExpandedChange ? onExpandedChange(!expanded) : setInternalExpanded(o => !o));
   const spec = sizeSpec[size];
   const isDisabled = state === "disabled";
   const isActive = state === "active";
@@ -105,7 +110,7 @@ export function SidebarItem({ text, icon, size = "md", state = "default", showCh
             aria-label={hasChildren ? (expanded ? "Collapse sub-items" : "Expand sub-items") : undefined}
             aria-expanded={hasChildren ? expanded : undefined}
             disabled={isDisabled || !hasChildren}
-            onClick={() => setExpanded(o => !o)}
+            onClick={toggleExpanded}
             className={cn("flex shrink-0 items-center justify-center", spec.icon, hasChildren ? "cursor-pointer" : "cursor-default")}
           >
             <FontAwesomeIcon icon={faChevronRight} className={cn("size-full text-[var(--text-strong)] transition-transform duration-150", hasChildren && expanded && "rotate-90")} />
