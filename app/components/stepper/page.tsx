@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Stepper, type CASStepperVariant, type StepperStep } from "@/components/ui/stepper";
+import { Stepper, StepperElement, type CASStepperVariant, type CASStepperPosition, type StepperStep } from "@/components/ui/stepper";
 import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
 
 const variants: CASStepperVariant[] = ["number", "dot"];
+const statuses: StepperStep["status"][] = ["done", "active", "inactive"];
+const positions: CASStepperPosition[] = ["left", "left-right", "right", "end"];
 const FLOW: StepperStep[] = [
   { label: "Vehicle", status: "done" },
   { label: "Ownership", status: "active" },
@@ -33,7 +35,7 @@ export default function StepperPage() {
       <section className="section-block">
         <p className="section-index">TYPES</p>
         <h2>Number or dot</h2>
-        <p className="wide-copy">The number variant labels each circle with its step index; the dot variant drops the number for a lighter, more compact track.</p>
+        <p className="wide-copy">The number variant labels each circle with its step index; the dot variant is the same anatomy with the number omitted.</p>
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
           {variants.map(x => (
             <article className="state-demo-card" key={x}>
@@ -44,15 +46,41 @@ export default function StepperPage() {
         </div>
       </section>
       <section className="section-block">
+        <p className="section-index">ELEMENT</p>
+        <h2>Left, left-right, right, and End</h2>
+        <p className="wide-copy">Each circle is its own building block with its own line segment(s) — Left has a line only after it, left-right has a line on both sides, right has a line only before it, and End stands alone with no line and no label.</p>
+        <div className="state-demo-grid">
+          {positions.map(position => (
+            <article className="state-demo-card" key={position}>
+              <StepperElement status="done" position={position} variant={variant} number={1} label={position === "end" ? undefined : "Vehicle"} />
+              <span className="tag tag-neutral">{position}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section-block">
         <p className="section-index">STATES</p>
         <h2>Done, active, and inactive</h2>
-        <p className="wide-copy">A step&apos;s status also colors the connecting line that follows it — cyan once done, muted gray while active, and subtle gray for anything still ahead.</p>
+        <p className="wide-copy">A step&apos;s status colors both its circle and its own line segment — cyan once done, dark gray while active, and light gray while inactive. Active is the only status with a filled center dot in the Dot variant.</p>
+        {variants.map(v => (
+          <div key={v} style={{ marginBottom: 24 }}>
+            <p className="wide-copy" style={{ fontWeight: 700, marginBottom: 8 }}>{v}</p>
+            <div className="state-demo-grid">
+              {statuses.map(status => (
+                <article className="state-demo-card" key={status}>
+                  <StepperElement status={status} position="left-right" variant={v} number={1} label="Vehicle" />
+                  <span className="tag tag-neutral">{status}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
       <section className="section-block">
         <p className="section-index">TOKENS & TYPOGRAPHY</p>
         <h2>Implementation bindings</h2>
         <div className="button-token-grid">
-          {[["Done circle", "color/action/secondary/base fill · #001939 number"], ["Active circle", "color/action/secondary/base border · canvas fill"], ["Inactive circle", "color/stroke/muted border"], ["Done line", "color/action/secondary/base"], ["Active line", "color/stroke/muted"], ["Inactive line", "color/stroke/subtle"], ["Label", "Nunito Sans · 14 px · Bold 700"]].map(([label, value]) => (
+          {[["Done circle", "color/action/secondary/base fill · #001939 number"], ["Active circle", "color/action/secondary/base border · canvas fill"], ["Inactive circle", "color/stroke/muted border"], ["Done line", "color/action/secondary/base"], ["Active line", "color/stroke/default"], ["Inactive line", "color/stroke/muted"], ["Label", "Nunito Sans · 14 px · Bold 700"]].map(([label, value]) => (
             <article key={label}><strong>{label}</strong><code>{value}</code></article>
           ))}
         </div>
