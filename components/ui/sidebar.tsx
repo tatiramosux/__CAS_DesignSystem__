@@ -87,9 +87,16 @@ export function SidebarItem({ text, icon, size = "md", state = "default", showCh
     );
   }
 
+  const canToggle = hasChildren && !isDisabled;
+
   return (
     <div className={cn("cas-sidebar-item-group", className)}>
       <div
+        role={canToggle ? "button" : undefined}
+        tabIndex={canToggle ? 0 : undefined}
+        aria-expanded={hasChildren ? expanded : undefined}
+        onClick={canToggle ? toggleExpanded : undefined}
+        onKeyDown={canToggle ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleExpanded(); } } : undefined}
         className={cn(
           "relative flex w-full items-center gap-1 rounded py-1.5 pl-2 pr-2 transition-colors duration-150",
           state === "default" && "hover:bg-[color-mix(in_srgb,var(--action-secondary-base)_8%,transparent)]",
@@ -97,7 +104,7 @@ export function SidebarItem({ text, icon, size = "md", state = "default", showCh
           state === "focused" && "bg-[var(--action-secondary-lighter)]",
           isActive && "bg-[var(--surface-canvas)]",
           isDisabled && "cursor-not-allowed opacity-50",
-          !isDisabled && "cursor-pointer"
+          !isDisabled && canToggle && "cursor-pointer"
         )}
       >
         <span className="flex min-w-0 flex-1 items-center gap-2">
@@ -105,16 +112,9 @@ export function SidebarItem({ text, icon, size = "md", state = "default", showCh
           <span className={cn("min-w-0 flex-1 truncate font-body text-[var(--text-strong)]", spec.text, isActive ? "font-bold" : "font-normal")}>{text}</span>
         </span>
         {showChevron && (
-          <button
-            type="button"
-            aria-label={hasChildren ? (expanded ? "Collapse sub-items" : "Expand sub-items") : undefined}
-            aria-expanded={hasChildren ? expanded : undefined}
-            disabled={isDisabled || !hasChildren}
-            onClick={toggleExpanded}
-            className={cn("flex shrink-0 items-center justify-center", spec.icon, hasChildren ? "cursor-pointer" : "cursor-default")}
-          >
+          <span className={cn("flex shrink-0 items-center justify-center", spec.icon)}>
             <FontAwesomeIcon icon={faChevronRight} className={cn("size-full text-[var(--text-strong)] transition-transform duration-150", hasChildren && expanded && "rotate-90")} />
-          </button>
+          </span>
         )}
         {state === "focused" && <span className="pointer-events-none absolute inset-0 rounded border-2 border-[var(--stroke-muted)] opacity-50" />}
       </div>

@@ -15,7 +15,7 @@ export default function Overview() {
       <section className="hero">
         <p className="eyebrow">CAS DESIGN SYSTEM · V1.0</p>
         <h1>Build consistent products,<br /><span>faster.</span></h1>
-        <p className="lead">A shared language for designers and developers to create accessible, theme-ready CarBrain experiences with confidence.</p>
+        <p className="lead">A shared language for designers and developers to create accessible, theme-ready CAS Auto experiences with confidence.</p>
         <div className="hero-actions">
           <Button asChild size="large" trailingIcon><Link href="/governance">Explore foundations</Link></Button>
           <Button asChild size="large" buttonType="secondary" treatment="outline" trailingIcon><Link href="/components">Browse components</Link></Button>

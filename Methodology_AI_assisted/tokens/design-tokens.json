@@ -8,2786 +8,350 @@
       }
     ],
     "variables": [
-      {
-        "name": "CarBrain/deep-blue/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E8EEFF"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#D0DDFF"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#98B8FF"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#5698FF"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0076E1"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0059AC"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#003B76"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#002147"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#001939"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#000E25"
-        }
-      },
-      {
-        "name": "CarBrain/deep-blue/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#000718"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#EDF8FF"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#DAF1FF"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#B0E4FF"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7BD7FF"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00CBFE"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00BBEA"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0092B7"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#006C88"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00485D"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#002734"
-        }
-      },
-      {
-        "name": "CarBrain/light-blue/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#001821"
-        }
-      },
-      {
-        "name": "CarBrain/lime/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F8FFEC"
-        }
-      },
-      {
-        "name": "CarBrain/lime/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F8FFEC"
-        }
-      },
-      {
-        "name": "CarBrain/lime/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E8FFBF"
-        }
-      },
-      {
-        "name": "CarBrain/lime/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E0FFA3"
-        }
-      },
-      {
-        "name": "CarBrain/lime/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#D8FF80"
-        }
-      },
-      {
-        "name": "CarBrain/lime/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#CBFF00"
-        }
-      },
-      {
-        "name": "CarBrain/lime/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#9EC700"
-        }
-      },
-      {
-        "name": "CarBrain/lime/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#729100"
-        }
-      },
-      {
-        "name": "CarBrain/lime/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4A5F00"
-        }
-      },
-      {
-        "name": "CarBrain/lime/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#263300"
-        }
-      },
-      {
-        "name": "CarBrain/lime/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#141C00"
-        }
-      },
-      {
-        "name": "orange/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFF7F5"
-        }
-      },
-      {
-        "name": "alpha/deep-blue/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00214714"
-        }
-      },
-      {
-        "name": "neutral/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFFFFF"
-        }
-      },
-      {
-        "name": "neutral/75",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F8F9FA"
-        }
-      },
-      {
-        "name": "neutral/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#EFEFF0"
-        }
-      },
-      {
-        "name": "neutral/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#B6B6B6"
-        }
-      },
-      {
-        "name": "neutral/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7C7C83"
-        }
-      },
-      {
-        "name": "neutral/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#68686E"
-        }
-      },
-      {
-        "name": "neutral/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4B4B53"
-        }
-      },
-      {
-        "name": "neutral/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#313135"
-        }
-      },
-      {
-        "name": "neutral/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C"
-        }
-      },
-      {
-        "name": "neutral/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0D0D0E"
-        }
-      },
-      {
-        "name": "neutral/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#040404"
-        }
-      },
-      {
-        "name": "alpha/deep-blue/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00214729"
-        }
-      },
-      {
-        "name": "alpha/deep-blue/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0021473D"
-        }
-      },
-      {
-        "name": "alpha/light-blue/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00BBEA14"
-        }
-      },
-      {
-        "name": "alpha/light-blue/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00BBEA29"
-        }
-      },
-      {
-        "name": "alpha/light-blue/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#00BBEA3D"
-        }
-      },
-      {
-        "name": "alpha/lime/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#CBFF0014"
-        }
-      },
-      {
-        "name": "alpha/lime/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#CBFF0029"
-        }
-      },
-      {
-        "name": "alpha/lime/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#CBFF003D"
-        }
-      },
-      {
-        "name": "alpha/orange/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF5E4014"
-        }
-      },
-      {
-        "name": "alpha/orange/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF5E4029"
-        }
-      },
-      {
-        "name": "alpha/orange/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF5E403D"
-        }
-      },
-      {
-        "name": "alpha/purple/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#721AE714"
-        }
-      },
-      {
-        "name": "alpha/purple/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#721AE729"
-        }
-      },
-      {
-        "name": "alpha/purple/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#721AE73D"
-        }
-      },
-      {
-        "name": "alpha/neutral/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7C7C8314"
-        }
-      },
-      {
-        "name": "alpha/neutral/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7C7C8329"
-        }
-      },
-      {
-        "name": "alpha/neutral/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7C7C833D"
-        }
-      },
-      {
-        "name": "alpha/black/4",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C0A"
-        }
-      },
-      {
-        "name": "alpha/black/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C14"
-        }
-      },
-      {
-        "name": "alpha/black/12",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C1F"
-        }
-      },
-      {
-        "name": "alpha/black/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C29"
-        }
-      },
-      {
-        "name": "alpha/black/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#19191C3D"
-        }
-      },
-      {
-        "name": "alpha/blue/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4075FF14"
-        }
-      },
-      {
-        "name": "alpha/blue/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4075FF29"
-        }
-      },
-      {
-        "name": "alpha/blue/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4075FF3D"
-        }
-      },
-      {
-        "name": "alpha/green/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#08D48B14"
-        }
-      },
-      {
-        "name": "alpha/green/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#08D48B29"
-        }
-      },
-      {
-        "name": "alpha/green/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#08D48B3D"
-        }
-      },
-      {
-        "name": "alpha/yellow/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFC83914"
-        }
-      },
-      {
-        "name": "alpha/yellow/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFC83929"
-        }
-      },
-      {
-        "name": "alpha/yellow/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFC8393D"
-        }
-      },
-      {
-        "name": "alpha/red/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF385C14"
-        }
-      },
-      {
-        "name": "alpha/red/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF385C29"
-        }
-      },
-      {
-        "name": "alpha/red/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF385C3D"
-        }
-      },
-      {
-        "name": "alpha/cyan/8",
-        "type": "COLOR",
-        "values": {
-          "Value": "#40DDFF14"
-        }
-      },
-      {
-        "name": "alpha/cyan/16",
-        "type": "COLOR",
-        "values": {
-          "Value": "#40DDFF29"
-        }
-      },
-      {
-        "name": "alpha/cyan/24",
-        "type": "COLOR",
-        "values": {
-          "Value": "#40DDFF3D"
-        }
-      },
-      {
-        "name": "orange/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFEFEC"
-        }
-      },
-      {
-        "name": "purple/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F8F4FE"
-        }
-      },
-      {
-        "name": "orange/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFDFD9"
-        }
-      },
-      {
-        "name": "orange/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFBFB3"
-        }
-      },
-      {
-        "name": "orange/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF7E66"
-        }
-      },
-      {
-        "name": "orange/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF5E40"
-        }
-      },
-      {
-        "name": "orange/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E4482B"
-        }
-      },
-      {
-        "name": "orange/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#C8391F"
-        }
-      },
-      {
-        "name": "purple/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F1E8FD"
-        }
-      },
-      {
-        "name": "purple/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E3D1FA"
-        }
-      },
-      {
-        "name": "purple/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#C7A3F5"
-        }
-      },
-      {
-        "name": "purple/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#8E48EC"
-        }
-      },
-      {
-        "name": "purple/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#721AE7"
-        }
-      },
-      {
-        "name": "purple/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#6816D6"
-        }
-      },
-      {
-        "name": "purple/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4E01B4"
-        }
-      },
-      {
-        "name": "blue/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F5F8FF"
-        }
-      },
-      {
-        "name": "blue/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#ECF1FF"
-        }
-      },
-      {
-        "name": "green/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F3FDF9"
-        }
-      },
-      {
-        "name": "green/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#E6FBF3"
-        }
-      },
-      {
-        "name": "green/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#CEF7E8"
-        }
-      },
-      {
-        "name": "green/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#9CEED1"
-        }
-      },
-      {
-        "name": "green/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#6BE5B9"
-        }
-      },
-      {
-        "name": "green/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#39DDA2"
-        }
-      },
-      {
-        "name": "green/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#08D48B"
-        }
-      },
-      {
-        "name": "yellow/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFFCF5"
-        }
-      },
-      {
-        "name": "green/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0A8F5F"
-        }
-      },
-      {
-        "name": "yellow/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFF9EB"
-        }
-      },
-      {
-        "name": "yellow/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFF4D7"
-        }
-      },
-      {
-        "name": "yellow/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFE9B0"
-        }
-      },
-      {
-        "name": "yellow/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFDE88"
-        }
-      },
-      {
-        "name": "yellow/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFD361"
-        }
-      },
-      {
-        "name": "yellow/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFC839"
-        }
-      },
-      {
-        "name": "red/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFF5F7"
-        }
-      },
-      {
-        "name": "yellow/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#C0780C"
-        }
-      },
-      {
-        "name": "red/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFEBEF"
-        }
-      },
-      {
-        "name": "red/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFD7DE"
-        }
-      },
-      {
-        "name": "red/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FFB0BE"
-        }
-      },
-      {
-        "name": "red/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF889D"
-        }
-      },
-      {
-        "name": "red/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF607D"
-        }
-      },
-      {
-        "name": "red/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#FF385C"
-        }
-      },
-      {
-        "name": "red/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#B31935"
-        }
-      },
-      {
-        "name": "blue/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#D9E3FF"
-        }
-      },
-      {
-        "name": "blue/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#C6D6FF"
-        }
-      },
-      {
-        "name": "blue/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#8CACFF"
-        }
-      },
-      {
-        "name": "blue/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#6691FF"
-        }
-      },
-      {
-        "name": "blue/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4075FF"
-        }
-      },
-      {
-        "name": "blue/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#245AE5"
-        }
-      },
-      {
-        "name": "cyan/50",
-        "type": "COLOR",
-        "values": {
-          "Value": "#F5FDFF"
-        }
-      },
-      {
-        "name": "cyan/100",
-        "type": "COLOR",
-        "values": {
-          "Value": "#ECFCFF"
-        }
-      },
-      {
-        "name": "cyan/200",
-        "type": "COLOR",
-        "values": {
-          "Value": "#D9F8FF"
-        }
-      },
-      {
-        "name": "cyan/300",
-        "type": "COLOR",
-        "values": {
-          "Value": "#C6F5FF"
-        }
-      },
-      {
-        "name": "cyan/400",
-        "type": "COLOR",
-        "values": {
-          "Value": "#8CEAFF"
-        }
-      },
-      {
-        "name": "cyan/500",
-        "type": "COLOR",
-        "values": {
-          "Value": "#66E3FF"
-        }
-      },
-      {
-        "name": "cyan/600",
-        "type": "COLOR",
-        "values": {
-          "Value": "#40DDFF"
-        }
-      },
-      {
-        "name": "cyan/700",
-        "type": "COLOR",
-        "values": {
-          "Value": "#15BEE3"
-        }
-      },
-      {
-        "name": "orange/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#8E2916"
-        }
-      },
-      {
-        "name": "orange/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#54180D"
-        }
-      },
-      {
-        "name": "orange/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#340F08"
-        }
-      },
-      {
-        "name": "purple/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#370180"
-        }
-      },
-      {
-        "name": "purple/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#21004C"
-        }
-      },
-      {
-        "name": "purple/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#14002F"
-        }
-      },
-      {
-        "name": "blue/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#143EA9"
-        }
-      },
-      {
-        "name": "blue/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0C2464"
-        }
-      },
-      {
-        "name": "blue/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#07173E"
-        }
-      },
-      {
-        "name": "green/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#076644"
-        }
-      },
-      {
-        "name": "green/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#043C28"
-        }
-      },
-      {
-        "name": "green/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#022519"
-        }
-      },
-      {
-        "name": "yellow/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#885508"
-        }
-      },
-      {
-        "name": "yellow/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#513205"
-        }
-      },
-      {
-        "name": "yellow/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#321F03"
-        }
-      },
-      {
-        "name": "red/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#7F1225"
-        }
-      },
-      {
-        "name": "red/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#4B0A16"
-        }
-      },
-      {
-        "name": "red/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#2F060E"
-        }
-      },
-      {
-        "name": "cyan/800",
-        "type": "COLOR",
-        "values": {
-          "Value": "#0F87A1"
-        }
-      },
-      {
-        "name": "cyan/900",
-        "type": "COLOR",
-        "values": {
-          "Value": "#09505F"
-        }
-      },
-      {
-        "name": "cyan/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#05313B"
-        }
-      },
-      {
-        "name": "neutral/950",
-        "type": "COLOR",
-        "values": {
-          "Value": "#020202"
-        }
-      }
+      { "name": "CarBrain/deep-blue/50", "type": "COLOR", "values": { "Value": "#E8EEFF" } },
+      { "name": "CarBrain/deep-blue/100", "type": "COLOR", "values": { "Value": "#D0DDFF" } },
+      { "name": "CarBrain/deep-blue/200", "type": "COLOR", "values": { "Value": "#98B8FF" } },
+      { "name": "CarBrain/deep-blue/300", "type": "COLOR", "values": { "Value": "#5698FF" } },
+      { "name": "CarBrain/deep-blue/400", "type": "COLOR", "values": { "Value": "#0076E1" } },
+      { "name": "CarBrain/deep-blue/500", "type": "COLOR", "values": { "Value": "#0059AC" } },
+      { "name": "CarBrain/deep-blue/600", "type": "COLOR", "values": { "Value": "#003B76" } },
+      { "name": "CarBrain/deep-blue/700", "type": "COLOR", "values": { "Value": "#002147" } },
+      { "name": "CarBrain/deep-blue/800", "type": "COLOR", "values": { "Value": "#001939" } },
+      { "name": "CarBrain/deep-blue/900", "type": "COLOR", "values": { "Value": "#000E25" } },
+      { "name": "CarBrain/deep-blue/950", "type": "COLOR", "values": { "Value": "#000718" } },
+      { "name": "CarBrain/light-blue/50", "type": "COLOR", "values": { "Value": "#EDF8FF" } },
+      { "name": "CarBrain/light-blue/100", "type": "COLOR", "values": { "Value": "#DAF1FF" } },
+      { "name": "CarBrain/light-blue/200", "type": "COLOR", "values": { "Value": "#B0E4FF" } },
+      { "name": "CarBrain/light-blue/300", "type": "COLOR", "values": { "Value": "#7BD7FF" } },
+      { "name": "CarBrain/light-blue/400", "type": "COLOR", "values": { "Value": "#00CBFE" } },
+      { "name": "CarBrain/light-blue/500", "type": "COLOR", "values": { "Value": "#00BBEA" } },
+      { "name": "CarBrain/light-blue/600", "type": "COLOR", "values": { "Value": "#0092B7" } },
+      { "name": "CarBrain/light-blue/700", "type": "COLOR", "values": { "Value": "#006C88" } },
+      { "name": "CarBrain/light-blue/800", "type": "COLOR", "values": { "Value": "#00485D" } },
+      { "name": "CarBrain/light-blue/900", "type": "COLOR", "values": { "Value": "#002734" } },
+      { "name": "CarBrain/light-blue/950", "type": "COLOR", "values": { "Value": "#001821" } },
+      { "name": "CarBrain/lime/50", "type": "COLOR", "values": { "Value": "#F8FFEC" } },
+      { "name": "CarBrain/lime/100", "type": "COLOR", "values": { "Value": "#F8FFEC" } },
+      { "name": "CarBrain/lime/200", "type": "COLOR", "values": { "Value": "#E8FFBF" } },
+      { "name": "CarBrain/lime/300", "type": "COLOR", "values": { "Value": "#E0FFA3" } },
+      { "name": "CarBrain/lime/400", "type": "COLOR", "values": { "Value": "#D8FF80" } },
+      { "name": "CarBrain/lime/500", "type": "COLOR", "values": { "Value": "#CBFF00" } },
+      { "name": "CarBrain/lime/600", "type": "COLOR", "values": { "Value": "#9EC700" } },
+      { "name": "CarBrain/lime/700", "type": "COLOR", "values": { "Value": "#729100" } },
+      { "name": "CarBrain/lime/800", "type": "COLOR", "values": { "Value": "#4A5F00" } },
+      { "name": "CarBrain/lime/900", "type": "COLOR", "values": { "Value": "#263300" } },
+      { "name": "CarBrain/lime/950", "type": "COLOR", "values": { "Value": "#141C00" } },
+      { "name": "orange/50", "type": "COLOR", "values": { "Value": "#FFF7F5" } },
+      { "name": "alpha/deep-blue/8", "type": "COLOR", "values": { "Value": "#00214714" } },
+      { "name": "neutral/50", "type": "COLOR", "values": { "Value": "#FFFFFF" } },
+      { "name": "neutral/75", "type": "COLOR", "values": { "Value": "#F8F9FA" } },
+      { "name": "neutral/100", "type": "COLOR", "values": { "Value": "#EFEFF0" } },
+      { "name": "neutral/200", "type": "COLOR", "values": { "Value": "#B6B6B6" } },
+      { "name": "neutral/300", "type": "COLOR", "values": { "Value": "#7C7C83" } },
+      { "name": "neutral/400", "type": "COLOR", "values": { "Value": "#68686E" } },
+      { "name": "neutral/500", "type": "COLOR", "values": { "Value": "#4B4B53" } },
+      { "name": "neutral/600", "type": "COLOR", "values": { "Value": "#313135" } },
+      { "name": "neutral/700", "type": "COLOR", "values": { "Value": "#19191C" } },
+      { "name": "neutral/800", "type": "COLOR", "values": { "Value": "#0D0D0E" } },
+      { "name": "neutral/900", "type": "COLOR", "values": { "Value": "#040404" } },
+      { "name": "alpha/deep-blue/16", "type": "COLOR", "values": { "Value": "#00214729" } },
+      { "name": "alpha/deep-blue/24", "type": "COLOR", "values": { "Value": "#0021473D" } },
+      { "name": "alpha/light-blue/8", "type": "COLOR", "values": { "Value": "#00BBEA14" } },
+      { "name": "alpha/light-blue/16", "type": "COLOR", "values": { "Value": "#00BBEA29" } },
+      { "name": "alpha/light-blue/24", "type": "COLOR", "values": { "Value": "#00BBEA3D" } },
+      { "name": "alpha/lime/8", "type": "COLOR", "values": { "Value": "#CBFF0014" } },
+      { "name": "alpha/lime/16", "type": "COLOR", "values": { "Value": "#CBFF0029" } },
+      { "name": "alpha/lime/24", "type": "COLOR", "values": { "Value": "#CBFF003D" } },
+      { "name": "alpha/orange/8", "type": "COLOR", "values": { "Value": "#FF5E4014" } },
+      { "name": "alpha/orange/16", "type": "COLOR", "values": { "Value": "#FF5E4029" } },
+      { "name": "alpha/orange/24", "type": "COLOR", "values": { "Value": "#FF5E403D" } },
+      { "name": "alpha/purple/8", "type": "COLOR", "values": { "Value": "#721AE714" } },
+      { "name": "alpha/purple/16", "type": "COLOR", "values": { "Value": "#721AE729" } },
+      { "name": "alpha/purple/24", "type": "COLOR", "values": { "Value": "#721AE73D" } },
+      { "name": "alpha/neutral/8", "type": "COLOR", "values": { "Value": "#7C7C8314" } },
+      { "name": "alpha/neutral/16", "type": "COLOR", "values": { "Value": "#7C7C8329" } },
+      { "name": "alpha/neutral/24", "type": "COLOR", "values": { "Value": "#7C7C833D" } },
+      { "name": "alpha/black/4", "type": "COLOR", "values": { "Value": "#19191C0A" } },
+      { "name": "alpha/black/8", "type": "COLOR", "values": { "Value": "#19191C14" } },
+      { "name": "alpha/black/12", "type": "COLOR", "values": { "Value": "#19191C1F" } },
+      { "name": "alpha/black/16", "type": "COLOR", "values": { "Value": "#19191C29" } },
+      { "name": "alpha/black/24", "type": "COLOR", "values": { "Value": "#19191C3D" } },
+      { "name": "alpha/blue/8", "type": "COLOR", "values": { "Value": "#4075FF14" } },
+      { "name": "alpha/blue/16", "type": "COLOR", "values": { "Value": "#4075FF29" } },
+      { "name": "alpha/blue/24", "type": "COLOR", "values": { "Value": "#4075FF3D" } },
+      { "name": "alpha/green/8", "type": "COLOR", "values": { "Value": "#08D48B14" } },
+      { "name": "alpha/green/16", "type": "COLOR", "values": { "Value": "#08D48B29" } },
+      { "name": "alpha/green/24", "type": "COLOR", "values": { "Value": "#08D48B3D" } },
+      { "name": "alpha/yellow/8", "type": "COLOR", "values": { "Value": "#FFC83914" } },
+      { "name": "alpha/yellow/16", "type": "COLOR", "values": { "Value": "#FFC83929" } },
+      { "name": "alpha/yellow/24", "type": "COLOR", "values": { "Value": "#FFC8393D" } },
+      { "name": "alpha/red/8", "type": "COLOR", "values": { "Value": "#FF385C14" } },
+      { "name": "alpha/red/16", "type": "COLOR", "values": { "Value": "#FF385C29" } },
+      { "name": "alpha/red/24", "type": "COLOR", "values": { "Value": "#FF385C3D" } },
+      { "name": "alpha/cyan/8", "type": "COLOR", "values": { "Value": "#40DDFF14" } },
+      { "name": "alpha/cyan/16", "type": "COLOR", "values": { "Value": "#40DDFF29" } },
+      { "name": "alpha/cyan/24", "type": "COLOR", "values": { "Value": "#40DDFF3D" } },
+      { "name": "orange/100", "type": "COLOR", "values": { "Value": "#FFEFEC" } },
+      { "name": "purple/50", "type": "COLOR", "values": { "Value": "#F8F4FE" } },
+      { "name": "orange/200", "type": "COLOR", "values": { "Value": "#FFDFD9" } },
+      { "name": "orange/300", "type": "COLOR", "values": { "Value": "#FFBFB3" } },
+      { "name": "orange/400", "type": "COLOR", "values": { "Value": "#FF7E66" } },
+      { "name": "orange/500", "type": "COLOR", "values": { "Value": "#FF5E40" } },
+      { "name": "orange/600", "type": "COLOR", "values": { "Value": "#E4482B" } },
+      { "name": "orange/700", "type": "COLOR", "values": { "Value": "#C8391F" } },
+      { "name": "purple/100", "type": "COLOR", "values": { "Value": "#F1E8FD" } },
+      { "name": "purple/200", "type": "COLOR", "values": { "Value": "#E3D1FA" } },
+      { "name": "purple/300", "type": "COLOR", "values": { "Value": "#C7A3F5" } },
+      { "name": "purple/400", "type": "COLOR", "values": { "Value": "#8E48EC" } },
+      { "name": "purple/500", "type": "COLOR", "values": { "Value": "#721AE7" } },
+      { "name": "purple/600", "type": "COLOR", "values": { "Value": "#6816D6" } },
+      { "name": "purple/700", "type": "COLOR", "values": { "Value": "#4E01B4" } },
+      { "name": "blue/50", "type": "COLOR", "values": { "Value": "#F5F8FF" } },
+      { "name": "blue/100", "type": "COLOR", "values": { "Value": "#ECF1FF" } },
+      { "name": "green/50", "type": "COLOR", "values": { "Value": "#F3FDF9" } },
+      { "name": "green/100", "type": "COLOR", "values": { "Value": "#E6FBF3" } },
+      { "name": "green/200", "type": "COLOR", "values": { "Value": "#CEF7E8" } },
+      { "name": "green/300", "type": "COLOR", "values": { "Value": "#9CEED1" } },
+      { "name": "green/400", "type": "COLOR", "values": { "Value": "#6BE5B9" } },
+      { "name": "green/500", "type": "COLOR", "values": { "Value": "#39DDA2" } },
+      { "name": "green/600", "type": "COLOR", "values": { "Value": "#08D48B" } },
+      { "name": "yellow/50", "type": "COLOR", "values": { "Value": "#FFFCF5" } },
+      { "name": "green/700", "type": "COLOR", "values": { "Value": "#0A8F5F" } },
+      { "name": "yellow/100", "type": "COLOR", "values": { "Value": "#FFF9EB" } },
+      { "name": "yellow/200", "type": "COLOR", "values": { "Value": "#FFF4D7" } },
+      { "name": "yellow/300", "type": "COLOR", "values": { "Value": "#FFE9B0" } },
+      { "name": "yellow/400", "type": "COLOR", "values": { "Value": "#FFDE88" } },
+      { "name": "yellow/500", "type": "COLOR", "values": { "Value": "#FFD361" } },
+      { "name": "yellow/600", "type": "COLOR", "values": { "Value": "#FFC839" } },
+      { "name": "red/50", "type": "COLOR", "values": { "Value": "#FFF5F7" } },
+      { "name": "yellow/700", "type": "COLOR", "values": { "Value": "#C0780C" } },
+      { "name": "red/100", "type": "COLOR", "values": { "Value": "#FFEBEF" } },
+      { "name": "red/200", "type": "COLOR", "values": { "Value": "#FFD7DE" } },
+      { "name": "red/300", "type": "COLOR", "values": { "Value": "#FFB0BE" } },
+      { "name": "red/400", "type": "COLOR", "values": { "Value": "#FF889D" } },
+      { "name": "red/500", "type": "COLOR", "values": { "Value": "#FF607D" } },
+      { "name": "red/600", "type": "COLOR", "values": { "Value": "#FF385C" } },
+      { "name": "red/700", "type": "COLOR", "values": { "Value": "#B31935" } },
+      { "name": "blue/200", "type": "COLOR", "values": { "Value": "#D9E3FF" } },
+      { "name": "blue/300", "type": "COLOR", "values": { "Value": "#C6D6FF" } },
+      { "name": "blue/400", "type": "COLOR", "values": { "Value": "#8CACFF" } },
+      { "name": "blue/500", "type": "COLOR", "values": { "Value": "#6691FF" } },
+      { "name": "blue/600", "type": "COLOR", "values": { "Value": "#4075FF" } },
+      { "name": "blue/700", "type": "COLOR", "values": { "Value": "#245AE5" } },
+      { "name": "cyan/50", "type": "COLOR", "values": { "Value": "#F5FDFF" } },
+      { "name": "cyan/100", "type": "COLOR", "values": { "Value": "#ECFCFF" } },
+      { "name": "cyan/200", "type": "COLOR", "values": { "Value": "#D9F8FF" } },
+      { "name": "cyan/300", "type": "COLOR", "values": { "Value": "#C6F5FF" } },
+      { "name": "cyan/400", "type": "COLOR", "values": { "Value": "#8CEAFF" } },
+      { "name": "cyan/500", "type": "COLOR", "values": { "Value": "#66E3FF" } },
+      { "name": "cyan/600", "type": "COLOR", "values": { "Value": "#40DDFF" } },
+      { "name": "cyan/700", "type": "COLOR", "values": { "Value": "#15BEE3" } },
+      { "name": "orange/800", "type": "COLOR", "values": { "Value": "#8E2916" } },
+      { "name": "orange/900", "type": "COLOR", "values": { "Value": "#54180D" } },
+      { "name": "orange/950", "type": "COLOR", "values": { "Value": "#340F08" } },
+      { "name": "purple/800", "type": "COLOR", "values": { "Value": "#370180" } },
+      { "name": "purple/900", "type": "COLOR", "values": { "Value": "#21004C" } },
+      { "name": "purple/950", "type": "COLOR", "values": { "Value": "#14002F" } },
+      { "name": "blue/800", "type": "COLOR", "values": { "Value": "#143EA9" } },
+      { "name": "blue/900", "type": "COLOR", "values": { "Value": "#0C2464" } },
+      { "name": "blue/950", "type": "COLOR", "values": { "Value": "#07173E" } },
+      { "name": "green/800", "type": "COLOR", "values": { "Value": "#076644" } },
+      { "name": "green/900", "type": "COLOR", "values": { "Value": "#043C28" } },
+      { "name": "green/950", "type": "COLOR", "values": { "Value": "#022519" } },
+      { "name": "yellow/800", "type": "COLOR", "values": { "Value": "#885508" } },
+      { "name": "yellow/900", "type": "COLOR", "values": { "Value": "#513205" } },
+      { "name": "yellow/950", "type": "COLOR", "values": { "Value": "#321F03" } },
+      { "name": "red/800", "type": "COLOR", "values": { "Value": "#7F1225" } },
+      { "name": "red/900", "type": "COLOR", "values": { "Value": "#4B0A16" } },
+      { "name": "red/950", "type": "COLOR", "values": { "Value": "#2F060E" } },
+      { "name": "cyan/800", "type": "COLOR", "values": { "Value": "#0F87A1" } },
+      { "name": "cyan/900", "type": "COLOR", "values": { "Value": "#09505F" } },
+      { "name": "cyan/950", "type": "COLOR", "values": { "Value": "#05313B" } },
+      { "name": "neutral/950", "type": "COLOR", "values": { "Value": "#020202" } }
     ]
   },
   "2 - Semantic": {
     "name": "2 - Semantic",
     "modes": [
-      {
-        "modeId": "1467:1",
-        "name": "☼ CarBrain - Light"
-      },
-      {
-        "modeId": "1480:2",
-        "name": " ☾  CarBrain - Dark"
-      },
-      {
-        "modeId": "13576:0",
-        "name": "☼ BrandX - Light"
-      }
+      { "modeId": "1467:1", "name": "☼ CarBrain - Light" },
+      { "modeId": "1480:2", "name": " ☾  CarBrain - Dark" },
+      { "modeId": "13576:0", "name": "☼ BrandX - Light" }
     ],
     "variables": [
-      {
-        "name": "color/action/primary/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/deep-blue/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/deep-blue/16"
-          },
-          "☼ BrandX - Light": {
-            "alias": "cyan/100"
-          }
-        }
-      },
-      {
-        "name": "color/action/primary/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/deep-blue/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/deep-blue/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "cyan/400"
-          }
-        }
-      },
-      {
-        "name": "color/action/primary/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/deep-blue/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/deep-blue/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "cyan/800"
-          }
-        }
-      },
-      {
-        "name": "color/action/primary/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/deep-blue/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/deep-blue/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "cyan/900"
-          }
-        }
-      },
-      {
-        "name": "color/action/primary/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/deep-blue/800"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/deep-blue/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "cyan/950"
-          }
-        }
-      },
-      {
-        "name": "color/action/secondary/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/light-blue/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/cyan/16"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/100"
-          }
-        }
-      },
-      {
-        "name": "color/action/secondary/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/light-blue/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/cyan/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/action/secondary/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/light-blue/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/light-blue/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/700"
-          }
-        }
-      },
-      {
-        "name": "color/action/secondary/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/light-blue/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/light-blue/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/800"
-          }
-        }
-      },
-      {
-        "name": "color/action/secondary/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/light-blue/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/light-blue/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/950"
-          }
-        }
-      },
-      {
-        "name": "color/action/tertiary/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/lime/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/lime/16"
-          },
-          "☼ BrandX - Light": {
-            "alias": "orange/100"
-          }
-        }
-      },
-      {
-        "name": "color/action/tertiary/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/lime/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/lime/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "orange/200"
-          }
-        }
-      },
-      {
-        "name": "color/action/tertiary/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/lime/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/lime/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "orange/400"
-          }
-        }
-      },
-      {
-        "name": "color/action/tertiary/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/lime/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/lime/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "orange/500"
-          }
-        }
-      },
-      {
-        "name": "color/action/tertiary/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "CarBrain/lime/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "CarBrain/lime/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "orange/700"
-          }
-        }
-      },
-      {
-        "name": "color/action/neutral/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/100"
-          }
-        }
-      },
-      {
-        "name": "color/action/neutral/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/action/neutral/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/400"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/200"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/400"
-          }
-        }
-      },
-      {
-        "name": "color/action/neutral/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/100"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/600"
-          }
-        }
-      },
-      {
-        "name": "color/action/neutral/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/800"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/800"
-          }
-        }
-      },
-      {
-        "name": "color/background/canvas",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/700"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/50"
-          }
-        }
-      },
-      {
-        "name": "color/background/surface",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/75"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/75"
-          }
-        }
-      },
-      {
-        "name": "color/background/subtle",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/100"
-          }
-        }
-      },
-      {
-        "name": "color/background/muted",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/background/inverse",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/200"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/600"
-          }
-        }
-      },
-      {
-        "name": "color/background/strong",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/800"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/800"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/error/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "red/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/red/8"
-          },
-          "☼ BrandX - Light": {
-            "alias": "red/100"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/error/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "red/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/red/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "red/200"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/error/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "red/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "red/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "red/500"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/error/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "red/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "red/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "red/600"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/error/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "red/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "red/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "red/700"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/success/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "green/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/green/8"
-          },
-          "☼ BrandX - Light": {
-            "alias": "green/100"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/success/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "green/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/green/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "green/200"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/success/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "green/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "green/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "green/500"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/success/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "green/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "green/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "green/600"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/success/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "green/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "green/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "green/700"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/warning/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "yellow/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/yellow/8"
-          },
-          "☼ BrandX - Light": {
-            "alias": "yellow/100"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/warning/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "yellow/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/yellow/24"
-          },
-          "☼ BrandX - Light": {
-            "alias": "yellow/200"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/warning/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "yellow/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "yellow/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "yellow/500"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/warning/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "yellow/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "yellow/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "yellow/600"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/warning/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "yellow/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "yellow/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "yellow/700"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/information/lighter",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "blue/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/blue/8"
-          },
-          "☼ BrandX - Light": {
-            "alias": "blue/200"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/information/light",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "blue/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "alpha/blue/16"
-          },
-          "☼ BrandX - Light": {
-            "alias": "blue/300"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/information/base",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "blue/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "blue/600"
-          },
-          "☼ BrandX - Light": {
-            "alias": "blue/500"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/information/dark",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "blue/600"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "blue/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "blue/600"
-          }
-        }
-      },
-      {
-        "name": "color/feedback/information/darker",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "blue/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "blue/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "blue/700"
-          }
-        }
-      },
-      {
-        "name": "color/icons/inverse",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/800"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/50"
-          }
-        }
-      },
-      {
-        "name": "color/icons/disable",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/100"
-          }
-        }
-      },
-      {
-        "name": "color/icons/subtle",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/icons/muted",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/300"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/300"
-          }
-        }
-      },
-      {
-        "name": "color/icons/default",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/400"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/200"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/400"
-          }
-        }
-      },
-      {
-        "name": "color/icons/strong",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/700"
-          }
-        }
-      },
-      {
-        "name": "color/static/inverse",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/900"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/50"
-          }
-        }
-      },
-      {
-        "name": "color/static/default",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/900"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/900"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/inverse",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/800"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/50"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/disable",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/75"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/75"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/subtle",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/100"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/100"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/muted",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/default",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/300"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/200"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/300"
-          }
-        }
-      },
-      {
-        "name": "color/stroke/strong",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/700"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/700"
-          }
-        }
-      },
-      {
-        "name": "color/text/inverse",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/50"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/800"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/50"
-          }
-        }
-      },
-      {
-        "name": "color/text/disable",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/200"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/500"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/200"
-          }
-        }
-      },
-      {
-        "name": "color/text/subtle",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/300"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/400"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/300"
-          }
-        }
-      },
-      {
-        "name": "color/text/muted",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/400"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/300"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/400"
-          }
-        }
-      },
-      {
-        "name": "color/text/default",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/500"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/200"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/500"
-          }
-        }
-      },
-      {
-        "name": "color/text/strong",
-        "type": "COLOR",
-        "values": {
-          "☼ CarBrain - Light": {
-            "alias": "neutral/800"
-          },
-          " ☾  CarBrain - Dark": {
-            "alias": "neutral/50"
-          },
-          "☼ BrandX - Light": {
-            "alias": "neutral/800"
-          }
-        }
-      }
+      { "name": "color/action/primary/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/deep-blue/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/deep-blue/16" }, "☼ BrandX - Light": { "alias": "cyan/100" } } },
+      { "name": "color/action/primary/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/deep-blue/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/deep-blue/24" }, "☼ BrandX - Light": { "alias": "cyan/400" } } },
+      { "name": "color/action/primary/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/deep-blue/600" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/deep-blue/400" }, "☼ BrandX - Light": { "alias": "cyan/800" } } },
+      { "name": "color/action/primary/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/deep-blue/700" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/deep-blue/500" }, "☼ BrandX - Light": { "alias": "cyan/900" } } },
+      { "name": "color/action/primary/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/deep-blue/800" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/deep-blue/600" }, "☼ BrandX - Light": { "alias": "cyan/950" } } },
+      { "name": "color/action/secondary/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/light-blue/50" }, " ☾  CarBrain - Dark": { "alias": "alpha/cyan/16" }, "☼ BrandX - Light": { "alias": "neutral/100" } } },
+      { "name": "color/action/secondary/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/light-blue/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/cyan/24" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/action/secondary/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/light-blue/500" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/light-blue/400" }, "☼ BrandX - Light": { "alias": "neutral/700" } } },
+      { "name": "color/action/secondary/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/light-blue/600" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/light-blue/500" }, "☼ BrandX - Light": { "alias": "neutral/800" } } },
+      { "name": "color/action/secondary/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/light-blue/700" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/light-blue/600" }, "☼ BrandX - Light": { "alias": "neutral/950" } } },
+      { "name": "color/action/tertiary/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/lime/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/lime/16" }, "☼ BrandX - Light": { "alias": "orange/100" } } },
+      { "name": "color/action/tertiary/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/lime/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/lime/24" }, "☼ BrandX - Light": { "alias": "orange/200" } } },
+      { "name": "color/action/tertiary/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/lime/500" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/lime/400" }, "☼ BrandX - Light": { "alias": "orange/400" } } },
+      { "name": "color/action/tertiary/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/lime/600" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/lime/500" }, "☼ BrandX - Light": { "alias": "orange/500" } } },
+      { "name": "color/action/tertiary/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "CarBrain/lime/700" }, " ☾  CarBrain - Dark": { "alias": "CarBrain/lime/600" }, "☼ BrandX - Light": { "alias": "orange/700" } } },
+      { "name": "color/action/neutral/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/100" }, " ☾  CarBrain - Dark": { "alias": "neutral/600" }, "☼ BrandX - Light": { "alias": "neutral/100" } } },
+      { "name": "color/action/neutral/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/200" }, " ☾  CarBrain - Dark": { "alias": "neutral/500" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/action/neutral/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/400" }, " ☾  CarBrain - Dark": { "alias": "neutral/200" }, "☼ BrandX - Light": { "alias": "neutral/400" } } },
+      { "name": "color/action/neutral/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/600" }, " ☾  CarBrain - Dark": { "alias": "neutral/100" }, "☼ BrandX - Light": { "alias": "neutral/600" } } },
+      { "name": "color/action/neutral/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/800" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/800" } } },
+      { "name": "color/background/canvas", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "color/static/inverse" }, " ☾  CarBrain - Dark": { "alias": "color/static/inverse" }, "☼ BrandX - Light": { "alias": "color/static/inverse" } } },
+      { "name": "color/background/surface", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/75" }, " ☾  CarBrain - Dark": { "alias": "neutral/600" }, "☼ BrandX - Light": { "alias": "neutral/75" } } },
+      { "name": "color/background/subtle", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/100" }, " ☾  CarBrain - Dark": { "alias": "neutral/500" }, "☼ BrandX - Light": { "alias": "neutral/100" } } },
+      { "name": "color/background/muted", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/200" }, " ☾  CarBrain - Dark": { "alias": "neutral/600" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/background/inverse", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/600" }, " ☾  CarBrain - Dark": { "alias": "neutral/200" }, "☼ BrandX - Light": { "alias": "neutral/600" } } },
+      { "name": "color/background/strong", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/800" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/800" } } },
+      { "name": "color/feedback/error/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "red/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/red/8" }, "☼ BrandX - Light": { "alias": "red/100" } } },
+      { "name": "color/feedback/error/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "red/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/red/24" }, "☼ BrandX - Light": { "alias": "red/200" } } },
+      { "name": "color/feedback/error/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "red/500" }, " ☾  CarBrain - Dark": { "alias": "red/600" }, "☼ BrandX - Light": { "alias": "red/500" } } },
+      { "name": "color/feedback/error/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "red/600" }, " ☾  CarBrain - Dark": { "alias": "red/500" }, "☼ BrandX - Light": { "alias": "red/600" } } },
+      { "name": "color/feedback/error/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "red/700" }, " ☾  CarBrain - Dark": { "alias": "red/300" }, "☼ BrandX - Light": { "alias": "red/700" } } },
+      { "name": "color/feedback/success/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "green/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/green/8" }, "☼ BrandX - Light": { "alias": "green/100" } } },
+      { "name": "color/feedback/success/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "green/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/green/24" }, "☼ BrandX - Light": { "alias": "green/200" } } },
+      { "name": "color/feedback/success/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "green/500" }, " ☾  CarBrain - Dark": { "alias": "green/600" }, "☼ BrandX - Light": { "alias": "green/500" } } },
+      { "name": "color/feedback/success/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "green/600" }, " ☾  CarBrain - Dark": { "alias": "green/500" }, "☼ BrandX - Light": { "alias": "green/600" } } },
+      { "name": "color/feedback/success/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "green/700" }, " ☾  CarBrain - Dark": { "alias": "green/300" }, "☼ BrandX - Light": { "alias": "green/700" } } },
+      { "name": "color/feedback/warning/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "yellow/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/yellow/8" }, "☼ BrandX - Light": { "alias": "yellow/100" } } },
+      { "name": "color/feedback/warning/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "yellow/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/yellow/24" }, "☼ BrandX - Light": { "alias": "yellow/200" } } },
+      { "name": "color/feedback/warning/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "yellow/500" }, " ☾  CarBrain - Dark": { "alias": "yellow/600" }, "☼ BrandX - Light": { "alias": "yellow/500" } } },
+      { "name": "color/feedback/warning/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "yellow/600" }, " ☾  CarBrain - Dark": { "alias": "yellow/500" }, "☼ BrandX - Light": { "alias": "yellow/600" } } },
+      { "name": "color/feedback/warning/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "yellow/700" }, " ☾  CarBrain - Dark": { "alias": "yellow/300" }, "☼ BrandX - Light": { "alias": "yellow/700" } } },
+      { "name": "color/feedback/information/lighter", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "blue/100" }, " ☾  CarBrain - Dark": { "alias": "alpha/blue/8" }, "☼ BrandX - Light": { "alias": "blue/200" } } },
+      { "name": "color/feedback/information/light", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "blue/200" }, " ☾  CarBrain - Dark": { "alias": "alpha/blue/16" }, "☼ BrandX - Light": { "alias": "blue/300" } } },
+      { "name": "color/feedback/information/base", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "blue/500" }, " ☾  CarBrain - Dark": { "alias": "blue/600" }, "☼ BrandX - Light": { "alias": "blue/500" } } },
+      { "name": "color/feedback/information/dark", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "blue/600" }, " ☾  CarBrain - Dark": { "alias": "blue/500" }, "☼ BrandX - Light": { "alias": "blue/600" } } },
+      { "name": "color/feedback/information/darker", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "blue/700" }, " ☾  CarBrain - Dark": { "alias": "blue/300" }, "☼ BrandX - Light": { "alias": "blue/700" } } },
+      { "name": "color/icons/inverse", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/50" }, " ☾  CarBrain - Dark": { "alias": "neutral/800" }, "☼ BrandX - Light": { "alias": "neutral/50" } } },
+      { "name": "color/icons/disable", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/100" }, " ☾  CarBrain - Dark": { "alias": "neutral/500" }, "☼ BrandX - Light": { "alias": "neutral/100" } } },
+      { "name": "color/icons/subtle", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/200" }, " ☾  CarBrain - Dark": { "alias": "neutral/400" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/icons/muted", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/300" }, " ☾  CarBrain - Dark": { "alias": "neutral/300" }, "☼ BrandX - Light": { "alias": "neutral/300" } } },
+      { "name": "color/icons/default", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/400" }, " ☾  CarBrain - Dark": { "alias": "neutral/200" }, "☼ BrandX - Light": { "alias": "neutral/400" } } },
+      { "name": "color/icons/strong", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/700" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/700" } } },
+      { "name": "color/static/inverse", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/50" }, " ☾  CarBrain - Dark": { "alias": "neutral/900" }, "☼ BrandX - Light": { "alias": "neutral/50" } } },
+      { "name": "color/static/default", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/900" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/900" } } },
+      { "name": "color/stroke/inverse", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/50" }, " ☾  CarBrain - Dark": { "alias": "neutral/800" }, "☼ BrandX - Light": { "alias": "neutral/50" } } },
+      { "name": "color/stroke/disable", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/75" }, " ☾  CarBrain - Dark": { "alias": "neutral/500" }, "☼ BrandX - Light": { "alias": "neutral/75" } } },
+      { "name": "color/stroke/subtle", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/100" }, " ☾  CarBrain - Dark": { "alias": "neutral/400" }, "☼ BrandX - Light": { "alias": "neutral/100" } } },
+      { "name": "color/stroke/muted", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/200" }, " ☾  CarBrain - Dark": { "alias": "neutral/300" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/stroke/default", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/300" }, " ☾  CarBrain - Dark": { "alias": "neutral/200" }, "☼ BrandX - Light": { "alias": "neutral/300" } } },
+      { "name": "color/stroke/strong", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/700" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/700" } } },
+      { "name": "color/text/inverse", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/50" }, " ☾  CarBrain - Dark": { "alias": "neutral/800" }, "☼ BrandX - Light": { "alias": "neutral/50" } } },
+      { "name": "color/text/disable", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/200" }, " ☾  CarBrain - Dark": { "alias": "neutral/500" }, "☼ BrandX - Light": { "alias": "neutral/200" } } },
+      { "name": "color/text/subtle", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/300" }, " ☾  CarBrain - Dark": { "alias": "neutral/400" }, "☼ BrandX - Light": { "alias": "neutral/300" } } },
+      { "name": "color/text/muted", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/400" }, " ☾  CarBrain - Dark": { "alias": "neutral/300" }, "☼ BrandX - Light": { "alias": "neutral/400" } } },
+      { "name": "color/text/default", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/500" }, " ☾  CarBrain - Dark": { "alias": "neutral/200" }, "☼ BrandX - Light": { "alias": "neutral/500" } } },
+      { "name": "color/text/strong", "type": "COLOR", "values": { "☼ CarBrain - Light": { "alias": "neutral/800" }, " ☾  CarBrain - Dark": { "alias": "neutral/50" }, "☼ BrandX - Light": { "alias": "neutral/800" } } }
     ]
   },
   "4 - Units": {
     "name": "4 - Units",
     "modes": [
-      {
-        "modeId": "1474:0",
-        "name": "Value"
-      }
+      { "modeId": "1474:0", "name": "Value" }
     ],
     "variables": [
-      {
-        "name": "units/none",
-        "type": "FLOAT",
-        "values": {
-          "Value": 0
-        }
-      },
-      {
-        "name": "units/1",
-        "type": "FLOAT",
-        "values": {
-          "Value": 1
-        }
-      },
-      {
-        "name": "units/2",
-        "type": "FLOAT",
-        "values": {
-          "Value": 2
-        }
-      },
-      {
-        "name": "units/4",
-        "type": "FLOAT",
-        "values": {
-          "Value": 4
-        }
-      },
-      {
-        "name": "units/6",
-        "type": "FLOAT",
-        "values": {
-          "Value": 6
-        }
-      },
-      {
-        "name": "units/8",
-        "type": "FLOAT",
-        "values": {
-          "Value": 8
-        }
-      },
-      {
-        "name": "units/10",
-        "type": "FLOAT",
-        "values": {
-          "Value": 10
-        }
-      },
-      {
-        "name": "units/12",
-        "type": "FLOAT",
-        "values": {
-          "Value": 12
-        }
-      },
-      {
-        "name": "units/14",
-        "type": "FLOAT",
-        "values": {
-          "Value": 14
-        }
-      },
-      {
-        "name": "units/16",
-        "type": "FLOAT",
-        "values": {
-          "Value": 16
-        }
-      },
-      {
-        "name": "units/18",
-        "type": "FLOAT",
-        "values": {
-          "Value": 18
-        }
-      },
-      {
-        "name": "units/20",
-        "type": "FLOAT",
-        "values": {
-          "Value": 20
-        }
-      },
-      {
-        "name": "units/24",
-        "type": "FLOAT",
-        "values": {
-          "Value": 24
-        }
-      },
-      {
-        "name": "units/26",
-        "type": "FLOAT",
-        "values": {
-          "Value": 26
-        }
-      },
-      {
-        "name": "units/28",
-        "type": "FLOAT",
-        "values": {
-          "Value": 28
-        }
-      },
-      {
-        "name": "units/32",
-        "type": "FLOAT",
-        "values": {
-          "Value": 32
-        }
-      },
-      {
-        "name": "units/36",
-        "type": "FLOAT",
-        "values": {
-          "Value": 36
-        }
-      },
-      {
-        "name": "units/40",
-        "type": "FLOAT",
-        "values": {
-          "Value": 40
-        }
-      },
-      {
-        "name": "units/44",
-        "type": "FLOAT",
-        "values": {
-          "Value": 44
-        }
-      },
-      {
-        "name": "units/48",
-        "type": "FLOAT",
-        "values": {
-          "Value": 48
-        }
-      },
-      {
-        "name": "units/56",
-        "type": "FLOAT",
-        "values": {
-          "Value": 56
-        }
-      },
-      {
-        "name": "units/64",
-        "type": "FLOAT",
-        "values": {
-          "Value": 64
-        }
-      },
-      {
-        "name": "units/72",
-        "type": "FLOAT",
-        "values": {
-          "Value": 72
-        }
-      },
-      {
-        "name": "units/80",
-        "type": "FLOAT",
-        "values": {
-          "Value": 80
-        }
-      },
-      {
-        "name": "units/88",
-        "type": "FLOAT",
-        "values": {
-          "Value": 88
-        }
-      },
-      {
-        "name": "units/96",
-        "type": "FLOAT",
-        "values": {
-          "Value": 96
-        }
-      },
-      {
-        "name": "units/104",
-        "type": "FLOAT",
-        "values": {
-          "Value": 104
-        }
-      },
-      {
-        "name": "units/112",
-        "type": "FLOAT",
-        "values": {
-          "Value": 112
-        }
-      },
-      {
-        "name": "units/120",
-        "type": "FLOAT",
-        "values": {
-          "Value": 120
-        }
-      },
-      {
-        "name": "units/128",
-        "type": "FLOAT",
-        "values": {
-          "Value": 128
-        }
-      },
-      {
-        "name": "units/144",
-        "type": "FLOAT",
-        "values": {
-          "Value": 144
-        }
-      },
-      {
-        "name": "units/160",
-        "type": "FLOAT",
-        "values": {
-          "Value": 160
-        }
-      },
-      {
-        "name": "units/192",
-        "type": "FLOAT",
-        "values": {
-          "Value": 192
-        }
-      },
-      {
-        "name": "units/208",
-        "type": "FLOAT",
-        "values": {
-          "Value": 208
-        }
-      },
-      {
-        "name": "units/224",
-        "type": "FLOAT",
-        "values": {
-          "Value": 224
-        }
-      },
-      {
-        "name": "units/256",
-        "type": "FLOAT",
-        "values": {
-          "Value": 256
-        }
-      },
-      {
-        "name": "units/288",
-        "type": "FLOAT",
-        "values": {
-          "Value": 288
-        }
-      }
+      { "name": "units/none", "type": "FLOAT", "values": { "Value": 0 } },
+      { "name": "units/1", "type": "FLOAT", "values": { "Value": 1 } },
+      { "name": "units/2", "type": "FLOAT", "values": { "Value": 2 } },
+      { "name": "units/4", "type": "FLOAT", "values": { "Value": 4 } },
+      { "name": "units/6", "type": "FLOAT", "values": { "Value": 6 } },
+      { "name": "units/8", "type": "FLOAT", "values": { "Value": 8 } },
+      { "name": "units/10", "type": "FLOAT", "values": { "Value": 10 } },
+      { "name": "units/12", "type": "FLOAT", "values": { "Value": 12 } },
+      { "name": "units/14", "type": "FLOAT", "values": { "Value": 14 } },
+      { "name": "units/16", "type": "FLOAT", "values": { "Value": 16 } },
+      { "name": "units/18", "type": "FLOAT", "values": { "Value": 18 } },
+      { "name": "units/20", "type": "FLOAT", "values": { "Value": 20 } },
+      { "name": "units/24", "type": "FLOAT", "values": { "Value": 24 } },
+      { "name": "units/26", "type": "FLOAT", "values": { "Value": 26 } },
+      { "name": "units/28", "type": "FLOAT", "values": { "Value": 28 } },
+      { "name": "units/32", "type": "FLOAT", "values": { "Value": 32 } },
+      { "name": "units/36", "type": "FLOAT", "values": { "Value": 36 } },
+      { "name": "units/40", "type": "FLOAT", "values": { "Value": 40 } },
+      { "name": "units/44", "type": "FLOAT", "values": { "Value": 44 } },
+      { "name": "units/48", "type": "FLOAT", "values": { "Value": 48 } },
+      { "name": "units/56", "type": "FLOAT", "values": { "Value": 56 } },
+      { "name": "units/64", "type": "FLOAT", "values": { "Value": 64 } },
+      { "name": "units/72", "type": "FLOAT", "values": { "Value": 72 } },
+      { "name": "units/80", "type": "FLOAT", "values": { "Value": 80 } },
+      { "name": "units/88", "type": "FLOAT", "values": { "Value": 88 } },
+      { "name": "units/96", "type": "FLOAT", "values": { "Value": 96 } },
+      { "name": "units/104", "type": "FLOAT", "values": { "Value": 104 } },
+      { "name": "units/112", "type": "FLOAT", "values": { "Value": 112 } },
+      { "name": "units/120", "type": "FLOAT", "values": { "Value": 120 } },
+      { "name": "units/128", "type": "FLOAT", "values": { "Value": 128 } },
+      { "name": "units/144", "type": "FLOAT", "values": { "Value": 144 } },
+      { "name": "units/160", "type": "FLOAT", "values": { "Value": 160 } },
+      { "name": "units/192", "type": "FLOAT", "values": { "Value": 192 } },
+      { "name": "units/208", "type": "FLOAT", "values": { "Value": 208 } },
+      { "name": "units/224", "type": "FLOAT", "values": { "Value": 224 } },
+      { "name": "units/256", "type": "FLOAT", "values": { "Value": 256 } },
+      { "name": "units/288", "type": "FLOAT", "values": { "Value": 288 } }
     ]
   },
   "5 - Radius": {
     "name": "5 - Radius",
     "modes": [
-      {
-        "modeId": "2060:0",
-        "name": "Value"
-      }
+      { "modeId": "2060:0", "name": "Value" }
     ],
     "variables": [
-      {
-        "name": "radius/null",
-        "type": "FLOAT",
-        "values": {
-          "Value": 0
-        }
-      },
-      {
-        "name": "radius/1",
-        "type": "FLOAT",
-        "values": {
-          "Value": 1
-        }
-      },
-      {
-        "name": "radius/2",
-        "type": "FLOAT",
-        "values": {
-          "Value": 2
-        }
-      },
-      {
-        "name": "radius/4",
-        "type": "FLOAT",
-        "values": {
-          "Value": 4
-        }
-      },
-      {
-        "name": "radius/6",
-        "type": "FLOAT",
-        "values": {
-          "Value": 6
-        }
-      },
-      {
-        "name": "radius/8",
-        "type": "FLOAT",
-        "values": {
-          "Value": 8
-        }
-      },
-      {
-        "name": "radius/12",
-        "type": "FLOAT",
-        "values": {
-          "Value": 12
-        }
-      },
-      {
-        "name": "radius/16",
-        "type": "FLOAT",
-        "values": {
-          "Value": 16
-        }
-      },
-      {
-        "name": "radius/20",
-        "type": "FLOAT",
-        "values": {
-          "Value": 20
-        }
-      },
-      {
-        "name": "radius/24",
-        "type": "FLOAT",
-        "values": {
-          "Value": 24
-        }
-      },
-      {
-        "name": "radius/32",
-        "type": "FLOAT",
-        "values": {
-          "Value": 32
-        }
-      },
-      {
-        "name": "radius/full",
-        "type": "FLOAT",
-        "values": {
-          "Value": 999
-        }
-      }
+      { "name": "radius/null", "type": "FLOAT", "values": { "Value": 0 } },
+      { "name": "radius/1", "type": "FLOAT", "values": { "Value": 1 } },
+      { "name": "radius/2", "type": "FLOAT", "values": { "Value": 2 } },
+      { "name": "radius/4", "type": "FLOAT", "values": { "Value": 4 } },
+      { "name": "radius/6", "type": "FLOAT", "values": { "Value": 6 } },
+      { "name": "radius/8", "type": "FLOAT", "values": { "Value": 8 } },
+      { "name": "radius/12", "type": "FLOAT", "values": { "Value": 12 } },
+      { "name": "radius/16", "type": "FLOAT", "values": { "Value": 16 } },
+      { "name": "radius/20", "type": "FLOAT", "values": { "Value": 20 } },
+      { "name": "radius/24", "type": "FLOAT", "values": { "Value": 24 } },
+      { "name": "radius/32", "type": "FLOAT", "values": { "Value": 32 } },
+      { "name": "radius/full", "type": "FLOAT", "values": { "Value": 999 } }
     ]
   },
   "3 - Typography": {
     "name": "3 - Typography",
     "modes": [
-      {
-        "modeId": "2075:0",
-        "name": "Desktop"
-      },
-      {
-        "modeId": "2075:2",
-        "name": "Mobile"
-      }
+      { "modeId": "2075:0", "name": "Desktop" },
+      { "modeId": "2075:2", "name": "Mobile" }
     ],
     "variables": [
-      {
-        "name": "font-family/heading",
-        "type": "STRING",
-        "values": {
-          "Desktop": "Paytone One",
-          "Mobile": "Paytone One"
-        }
-      },
-      {
-        "name": "font-family/body",
-        "type": "STRING",
-        "values": {
-          "Desktop": "Nunito Sans",
-          "Mobile": "Nunito Sans"
-        }
-      },
-      {
-        "name": "font-sizes/heading/xxxl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/72"
-          },
-          "Mobile": {
-            "alias": "units/40"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/heading/xxl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/56"
-          },
-          "Mobile": {
-            "alias": "units/32"
-          }
-        }
-      },
-      {
-        "name": "font-weight/regular",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 400,
-          "Mobile": 400
-        }
-      },
-      {
-        "name": "font-weight/medium",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 500,
-          "Mobile": 500
-        }
-      },
-      {
-        "name": "font-weight/semi-bold",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 600,
-          "Mobile": 600
-        }
-      },
-      {
-        "name": "font-weight/bold",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 700,
-          "Mobile": 700
-        }
-      },
-      {
-        "name": "font-sizes/heading/xl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/48"
-          },
-          "Mobile": {
-            "alias": "units/28"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/heading/lg",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/40"
-          },
-          "Mobile": {
-            "alias": "units/26"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/heading/md",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/32"
-          },
-          "Mobile": {
-            "alias": "units/24"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/heading/sm",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/24"
-          },
-          "Mobile": {
-            "alias": "units/20"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/heading/xs",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/20"
-          },
-          "Mobile": {
-            "alias": "units/18"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/xxxl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/28"
-          },
-          "Mobile": {
-            "alias": "units/24"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/xxl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/24"
-          },
-          "Mobile": {
-            "alias": "units/18"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/xl",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/18"
-          },
-          "Mobile": {
-            "alias": "units/16"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/lg",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/16"
-          },
-          "Mobile": {
-            "alias": "units/16"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/md",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/14"
-          },
-          "Mobile": {
-            "alias": "units/14"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/sm",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/12"
-          },
-          "Mobile": {
-            "alias": "units/12"
-          }
-        }
-      },
-      {
-        "name": "font-sizes/body/xs",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": {
-            "alias": "units/10"
-          },
-          "Mobile": {
-            "alias": "units/10"
-          }
-        }
-      }
+      { "name": "font-family/heading", "type": "STRING", "values": { "Desktop": "Paytone One", "Mobile": "Paytone One" } },
+      { "name": "font-family/body", "type": "STRING", "values": { "Desktop": "Nunito Sans", "Mobile": "Nunito Sans" } },
+      { "name": "font-sizes/heading/xxxl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/72" }, "Mobile": { "alias": "units/40" } } },
+      { "name": "font-sizes/heading/xxl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/56" }, "Mobile": { "alias": "units/32" } } },
+      { "name": "font-weight/regular", "type": "FLOAT", "values": { "Desktop": 400, "Mobile": 400 } },
+      { "name": "font-weight/medium", "type": "FLOAT", "values": { "Desktop": 500, "Mobile": 500 } },
+      { "name": "font-weight/semi-bold", "type": "FLOAT", "values": { "Desktop": 600, "Mobile": 600 } },
+      { "name": "font-weight/bold", "type": "FLOAT", "values": { "Desktop": 700, "Mobile": 700 } },
+      { "name": "font-sizes/heading/xl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/48" }, "Mobile": { "alias": "units/28" } } },
+      { "name": "font-sizes/heading/lg", "type": "FLOAT", "values": { "Desktop": { "alias": "units/40" }, "Mobile": { "alias": "units/26" } } },
+      { "name": "font-sizes/heading/md", "type": "FLOAT", "values": { "Desktop": { "alias": "units/32" }, "Mobile": { "alias": "units/24" } } },
+      { "name": "font-sizes/heading/sm", "type": "FLOAT", "values": { "Desktop": { "alias": "units/24" }, "Mobile": { "alias": "units/20" } } },
+      { "name": "font-sizes/heading/xs", "type": "FLOAT", "values": { "Desktop": { "alias": "units/20" }, "Mobile": { "alias": "units/18" } } },
+      { "name": "font-sizes/body/xxxl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/28" }, "Mobile": { "alias": "units/24" } } },
+      { "name": "font-sizes/body/xxl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/24" }, "Mobile": { "alias": "units/18" } } },
+      { "name": "font-sizes/body/xl", "type": "FLOAT", "values": { "Desktop": { "alias": "units/18" }, "Mobile": { "alias": "units/16" } } },
+      { "name": "font-sizes/body/lg", "type": "FLOAT", "values": { "Desktop": { "alias": "units/16" }, "Mobile": { "alias": "units/16" } } },
+      { "name": "font-sizes/body/md", "type": "FLOAT", "values": { "Desktop": { "alias": "units/14" }, "Mobile": { "alias": "units/14" } } },
+      { "name": "font-sizes/body/sm", "type": "FLOAT", "values": { "Desktop": { "alias": "units/12" }, "Mobile": { "alias": "units/12" } } },
+      { "name": "font-sizes/body/xs", "type": "FLOAT", "values": { "Desktop": { "alias": "units/10" }, "Mobile": { "alias": "units/10" } } }
     ]
   },
   "6 - Grids": {
     "name": "6 - Grids",
     "modes": [
-      {
-        "modeId": "2083:0",
-        "name": "Desktop"
-      },
-      {
-        "modeId": "2083:1",
-        "name": "Tablet"
-      },
-      {
-        "modeId": "2083:2",
-        "name": "Mobile"
-      }
+      { "modeId": "2083:0", "name": "Desktop" },
+      { "modeId": "2083:1", "name": "Tablet" },
+      { "modeId": "2083:2", "name": "Mobile" }
     ],
     "variables": [
-      {
-        "name": "grids/screen-width",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 1440,
-          "Tablet": 834,
-          "Mobile": 375
-        }
-      },
-      {
-        "name": "grids/columns",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 12,
-          "Tablet": 6,
-          "Mobile": 4
-        }
-      },
-      {
-        "name": "grids/width",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 72,
-          "Tablet": 88,
-          "Mobile": 74
-        }
-      },
-      {
-        "name": "grids/gutter",
-        "type": "FLOAT",
-        "values": {
-          "Desktop": 32,
-          "Tablet": 32,
-          "Mobile": 16
-        }
-      }
+      { "name": "grids/screen-width", "type": "FLOAT", "values": { "Desktop": 1440, "Tablet": 834, "Mobile": 375 } },
+      { "name": "grids/columns", "type": "FLOAT", "values": { "Desktop": 12, "Tablet": 6, "Mobile": 4 } },
+      { "name": "grids/width", "type": "FLOAT", "values": { "Desktop": 72, "Tablet": 88, "Mobile": 74 } },
+      { "name": "grids/gutter", "type": "FLOAT", "values": { "Desktop": 32, "Tablet": 32, "Mobile": 16 } }
     ]
   }
 }

@@ -2494,15 +2494,15 @@
         "values": {
           "☼ CarBrain - Light": {
             "type": "ALIAS",
-            "aliasOf": "neutral/50"
+            "aliasOf": "color/static/inverse"
           },
           "☾ CarBrain - Dark": {
             "type": "ALIAS",
-            "aliasOf": "neutral/700"
+            "aliasOf": "color/static/inverse"
           },
           "☼ BrandX - Light": {
             "type": "ALIAS",
-            "aliasOf": "neutral/50"
+            "aliasOf": "color/static/inverse"
           }
         }
       },
@@ -2697,7 +2697,7 @@
         }
       },
       {
-        "name": "color/feedback/sucess/lighter",
+        "name": "color/feedback/success/lighter",
         "resolvedType": "COLOR",
         "scopes": [],
         "values": {
@@ -2716,7 +2716,7 @@
         }
       },
       {
-        "name": "color/feedback/sucess/light",
+        "name": "color/feedback/success/light",
         "resolvedType": "COLOR",
         "scopes": [],
         "values": {
@@ -2735,7 +2735,7 @@
         }
       },
       {
-        "name": "color/feedback/sucess/base",
+        "name": "color/feedback/success/base",
         "resolvedType": "COLOR",
         "scopes": [],
         "values": {
@@ -2754,7 +2754,7 @@
         }
       },
       {
-        "name": "color/feedback/sucess/dark",
+        "name": "color/feedback/success/dark",
         "resolvedType": "COLOR",
         "scopes": [],
         "values": {
@@ -2773,7 +2773,7 @@
         }
       },
       {
-        "name": "color/feedback/sucess/darker",
+        "name": "color/feedback/success/darker",
         "resolvedType": "COLOR",
         "scopes": [],
         "values": {
