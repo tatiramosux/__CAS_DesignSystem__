@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { PageHeader } from "@/components/page-header";
 import { CopyButton } from "@/components/copy-button";
+import { Dropdown } from "@/components/ui/dropdown";
 import { audit, collectionSummary, migrations, semanticTokens, themes } from "@/app/token-data";
 import { useTheme } from "@/components/theme-context";
 
@@ -21,10 +22,16 @@ export default function Tokens() {
       <section className="section-block">
         <div className="section-toolbar">
           <div><p className="section-index">01 / SEMANTIC TOKENS</p><h2>{themes.find(t => t.id === theme)?.label}</h2></div>
-          <select value={filter} onChange={event => setFilter(event.target.value)} aria-label="Filter semantic tokens">
-            <option value="all">All categories</option>
-            {categories.slice(1).map(category => <option key={category} value={category}>{category}</option>)}
-          </select>
+          <div style={{ width: 200 }}>
+            <Dropdown
+              aria-label="Filter semantic tokens"
+              size="compact"
+              position="right"
+              value={filter}
+              onChange={setFilter}
+              options={[{ value: "all", label: "All categories" }, ...categories.slice(1).map(category => ({ value: category, label: category }))]}
+            />
+          </div>
         </div>
         <div className="token-table">
           <div className="token-row token-head"><span>Canonical token</span><span>Figma alias</span><span>Resolved value</span><span></span></div>

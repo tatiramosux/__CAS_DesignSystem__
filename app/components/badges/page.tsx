@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Badge, type CASBadgeSize, type CASBadgeStyle, type CASBadgeColor } from "@/components/ui/badge";
+import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
 import { themes } from "@/app/token-data";
 import { useTheme } from "@/components/theme-context";
@@ -27,9 +28,9 @@ export default function BadgesPage() {
           <div className="button-showcase"><Badge size={size} badgeStyle={badgeStyle} color={color} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Badge</Badge></div>
         </div>
         <aside className="button-controls">
-          <label>Size<select value={size} onChange={e => setSize(e.target.value as CASBadgeSize)}>{sizes.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>Style<select value={badgeStyle} onChange={e => setBadgeStyle(e.target.value as CASBadgeStyle)}>{styles.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>Color<select value={color} onChange={e => setColor(e.target.value as CASBadgeColor)}>{colors.map(x => <option key={x}>{x}</option>)}</select></label>
+          <Dropdown label="Size" size="compact" value={size} onChange={v => setSize(v as CASBadgeSize)} options={sizes.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="Style" size="compact" value={badgeStyle} onChange={v => setBadgeStyle(v as CASBadgeStyle)} options={styles.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="Color" size="compact" value={color} onChange={v => setColor(v as CASBadgeColor)} options={colors.map(x => ({ value: x, label: x }))} />
           <label className="check-field"><input type="checkbox" checked={leadingIcon} onChange={e => setLeadingIcon(e.target.checked)} /> Leading icon</label>
           <label className="check-field"><input type="checkbox" checked={trailingIcon} onChange={e => setTrailingIcon(e.target.checked)} /> Trailing icon</label>
         </aside>

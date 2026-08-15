@@ -11,6 +11,8 @@ const byName = new Map<string, IconDefinition>();
 for (const value of Object.values(solidIcons)) {
   if (typeof value === "object" && value !== null && "iconName" in value && "icon" in value) {
     const icon = value as IconDefinition;
+    // Skip single-character glyphs (digits 0-9, letters a-z) — not real pictographic icons.
+    if (icon.iconName.length === 1) continue;
     if (!byName.has(icon.iconName)) byName.set(icon.iconName, icon);
   }
 }

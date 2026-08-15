@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowUpRightFromSquare, faBars, faChevronLeft, faChevronRight, faMagnifyingGlass, faSquare } from "@fortawesome/free-solid-svg-icons";
 import { cssVariables, themes, type ThemeId } from "@/app/token-data";
 import { ThemeContext } from "@/components/theme-context";
+import { Dropdown } from "@/components/ui/dropdown";
 
 type NavGroup = { label: string; mark: string; items: { href: string; label: string }[] };
 
@@ -19,7 +20,7 @@ const nav: NavGroup[] = [
   ] },
   { label: "Components", mark: "03", items: [
     { href: "/components", label: "Component index" },
-    ...[{ href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }]
+    ...[{ href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }, { href: "/components/icon", label: "Icon" }, { href: "/components/dropdown", label: "Dropdown" }]
       .sort((a, b) => a.label.localeCompare(b.label)),
   ] },
   { label: "Visual Assets", mark: "04", items: [
@@ -65,9 +66,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
           <div className="top-actions">
             <a href="https://www.figma.com/design/ljmdJkv2aa10SL4NazHYAC/____CAS-Design-System--v1.0--____?node-id=1-574&t=f1D4dalJv9MCo0x2-1" target="_blank" rel="noreferrer">Figma <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
-            <select value={theme} onChange={e => setTheme(e.target.value as ThemeId)} aria-label="Select theme">
-              {themes.map(t => <option key={t.id} value={t.id}>{t.label}</option>)}
-            </select>
+            <div style={{ width: 172 }}>
+              <Dropdown
+                aria-label="Select theme"
+                size="sm"
+                inverse
+                position="right"
+                value={theme}
+                onChange={v => setTheme(v as ThemeId)}
+                options={themes.map(t => ({ value: t.id, label: t.label }))}
+              />
+            </div>
           </div>
         </header>
         <aside className={`sidebar ${mobileOpen ? "mobile-open" : ""}`}>

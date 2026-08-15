@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TextInput, type CASTextInputSize, type CASTextInputState } from "@/components/ui/text-input";
 import { Badge } from "@/components/ui/badge";
+import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
 import { themes } from "@/app/token-data";
 import { useTheme } from "@/components/theme-context";
@@ -30,8 +31,8 @@ export default function TextInputPage() {
           <div className="button-showcase"><TextInput size={size} state={state} required={required} leadingIcon={leadingIcon} trailingIcon={trailingIcon} showInfo={showInfo} hintText={showHint ? hintText : undefined} /></div>
         </div>
         <aside className="button-controls">
-          <label>Size<select value={size} onChange={e => setSize(e.target.value as CASTextInputSize)}>{sizes.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>State<select value={state} onChange={e => setState(e.target.value as CASTextInputState)}>{states.map(x => <option key={x}>{x}</option>)}</select></label>
+          <Dropdown label="Size" size="compact" value={size} onChange={v => setSize(v as CASTextInputSize)} options={sizes.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="State" size="compact" value={state} onChange={v => setState(v as CASTextInputState)} options={states.map(x => ({ value: x, label: x }))} />
           <label className="check-field"><input type="checkbox" checked={required} onChange={e => setRequired(e.target.checked)} /> Required asterisk</label>
           <label className="check-field"><input type="checkbox" checked={leadingIcon} onChange={e => setLeadingIcon(e.target.checked)} /> Leading icon</label>
           <label className="check-field"><input type="checkbox" checked={trailingIcon} onChange={e => setTrailingIcon(e.target.checked)} /> Trailing icon</label>
@@ -54,7 +55,7 @@ export default function TextInputPage() {
         </div>
       </section>
       <section className="section-block"><p className="section-index">SIZE</p><h2>Two fixed heights</h2><div className="button-size-specs">{sizes.map(x => <article key={x}><TextInput size={x} state="default" leadingIcon trailingIcon /><strong>{x}</strong><span>{x === "large" ? "56 px · 16 px padding" : "48 px · 12 px padding"}</span></article>)}</div></section>
-      <section className="section-block"><p className="section-index">TOKENS & TYPOGRAPHY</p><h2>Implementation bindings</h2><div className="button-token-grid">{[["Default border", "color/stroke/muted"], ["Hover border", "color/action/secondary/light"], ["Focus border", "color/action/secondary/base"], ["Error border & text", "color/feedback/error/base"], ["Disabled label", "color/text/subtle"], ["Disabled value", "color/text/disable"], ["Label", "Nunito Sans · 14 px · Bold 700"], ["Hint text", "Nunito Sans · 12 px · Regular 400"], ["Corner radius", "radius/12 · 12 px"]].map(([label, value]) => <article key={label}><strong>{label}</strong><code>{value}</code></article>)}</div></section>
+      <section className="section-block"><p className="section-index">TOKENS & TYPOGRAPHY</p><h2>Implementation bindings</h2><div className="button-token-grid">{[["Default border", "color/stroke/muted"], ["Hover border", "color/action/secondary/light"], ["Focus ring", "color/action/secondary/base"], ["Error border & text", "color/feedback/error/base"], ["Disabled label", "color/text/subtle"], ["Disabled value", "color/text/disable"], ["Label", "Nunito Sans · 14 px · Bold 700"], ["Hint text", "Nunito Sans · 12 px · Regular 400"], ["Corner radius", "radius/12 · 12 px"]].map(([label, value]) => <article key={label}><strong>{label}</strong><code>{value}</code></article>)}</div></section>
       <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Label · Editable text", "Required · Boolean, renders a red asterisk", "Size · Medium (48), Large (56)", "State · Default, Hover, Focus, Filled, Error, Disabled", "Leading icon · Boolean + instance swap, independent of trailing", "Trailing icon · Boolean + instance swap, independent of leading", "Info icon · Boolean, sits beside the label", "Hint text · Optional line below the field, switches to error color in the Error state"].map((x, i) => <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>)}</div></section>
     </>
   );

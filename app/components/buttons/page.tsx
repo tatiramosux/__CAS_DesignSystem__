@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button, type CASButtonSize, type CASButtonState, type CASButtonTreatment, type CASButtonType } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
 import { themes } from "@/app/token-data";
 import { useTheme } from "@/components/theme-context";
@@ -39,10 +40,10 @@ export default function Buttons() {
           <div className="button-showcase"><Button buttonType={buttonType} size={buttonSize} state={buttonState} treatment={buttonTreatment} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Button</Button></div>
         </div>
         <aside className="button-controls">
-          <label>Type<select value={buttonType} onChange={e => setButtonType(e.target.value as CASButtonType)}>{types.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>Size<select value={buttonSize} onChange={e => setButtonSize(e.target.value as CASButtonSize)}>{sizes.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>State<select value={buttonState} onChange={e => setButtonState(e.target.value as CASButtonState)}>{states.map(x => <option key={x}>{x}</option>)}</select></label>
-          <label>Treatment<select value={activeTreatment} disabled={treatmentLocked} onChange={e => setButtonTreatment(e.target.value as CASButtonTreatment)}><option value="solid">solid</option><option value="outline">outline</option></select></label>
+          <Dropdown label="Type" size="compact" value={buttonType} onChange={v => setButtonType(v as CASButtonType)} options={types.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="Size" size="compact" value={buttonSize} onChange={v => setButtonSize(v as CASButtonSize)} options={sizes.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="State" size="compact" value={buttonState} onChange={v => setButtonState(v as CASButtonState)} options={states.map(x => ({ value: x, label: x }))} />
+          <Dropdown label="Treatment" size="compact" value={activeTreatment} disabled={treatmentLocked} onChange={v => setButtonTreatment(v as CASButtonTreatment)} options={[{ value: "solid", label: "solid" }, { value: "outline", label: "outline" }]} />
           <label className="check-field"><input type="checkbox" checked={leadingIcon} onChange={e => setLeadingIcon(e.target.checked)} /> Leading icon</label>
           <label className="check-field"><input type="checkbox" checked={trailingIcon} onChange={e => setTrailingIcon(e.target.checked)} /> Trailing icon</label>
         </aside>
