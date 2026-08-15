@@ -52,10 +52,10 @@ export function TextInput({
       <div
         className={cn(
           "flex items-center gap-2 rounded-xl border-[1.5px] border-[var(--stroke-muted)] bg-[var(--surface-canvas)] px-3 shadow-[0_1px_2px_rgba(25,25,28,0.04)] transition-colors duration-150",
-          "focus-within:border-[var(--action-secondary-base)] focus-within:shadow-[0_0_0_4px_color-mix(in_srgb,var(--action-secondary-base)_24%,transparent),0_1px_2px_rgba(25,25,28,0.04)]",
+          "focus-within:shadow-[0_0_0_4px_color-mix(in_srgb,var(--action-secondary-base)_24%,transparent),0_1px_2px_rgba(25,25,28,0.04)]",
           size === "large" ? "h-14 px-4" : "h-12",
           forcedHover && "border-[var(--action-secondary-light)] cursor-pointer",
-          forcedFocus && "border-[var(--action-secondary-base)] shadow-[0_0_0_4px_color-mix(in_srgb,var(--action-secondary-base)_24%,transparent),0_1px_2px_rgba(25,25,28,0.04)]",
+          forcedFocus && "shadow-[0_0_0_4px_color-mix(in_srgb,var(--action-secondary-base)_24%,transparent),0_1px_2px_rgba(25,25,28,0.04)]",
           isError && "border-[var(--feedback-error-base)] bg-[color-mix(in_srgb,var(--feedback-error-base)_8%,var(--surface-canvas))]",
           isDisabled && "cursor-not-allowed bg-[color-mix(in_srgb,var(--text-muted)_8%,var(--surface-canvas))]"
         )}

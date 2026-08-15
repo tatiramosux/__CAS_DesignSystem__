@@ -22,8 +22,12 @@ const nav: NavGroup[] = [
     ...[{ href: "/components/buttons", label: "Buttons" }, { href: "/components/text-input", label: "Text Input" }, { href: "/components/badges", label: "Badges" }]
       .sort((a, b) => a.label.localeCompare(b.label)),
   ] },
-  { label: "Templates", mark: "04", items: [{ href: "/templates", label: "Templates index" }] },
-  { label: "Resources", mark: "05", items: [{ href: "/resources", label: "Libraries & tools" }] },
+  { label: "Visual Assets", mark: "04", items: [
+    ...[{ href: "/visual-assets/icons", label: "Icons" }, { href: "/visual-assets/illustrations", label: "Illustrations" }]
+      .sort((a, b) => a.label.localeCompare(b.label)),
+  ] },
+  { label: "Templates", mark: "05", items: [{ href: "/templates", label: "Templates index" }] },
+  { label: "Resources", mark: "06", items: [{ href: "/resources", label: "Libraries & tools" }] },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {

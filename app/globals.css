@@ -98,3 +98,12 @@ html[data-theme="carbrain-dark"] .collection-strip strong,html[data-theme="carbr
 .resource-row span{color:var(--text-strong);font-size:13px;font-weight:700}
 .resource-row b{display:inline-flex;align-items:center;gap:8px;color:var(--action);font-size:12px;font-weight:800;white-space:nowrap}
 .resource-row:hover{border-color:var(--stroke-default)}.resource-row:hover span{color:var(--action)}
+
+.icon-search{display:block;width:100%;max-width:420px;height:44px;margin:14px 0;padding:0 14px;background:var(--surface);border:1px solid var(--stroke-default);border-radius:8px;color:var(--text-default);font-size:13px}
+.icon-search::placeholder{color:var(--text-subtle)}
+.icon-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:20px}
+.icon-card{display:grid;justify-items:center;gap:8px;padding:16px 10px;border:1px solid var(--stroke-subtle);border-radius:8px;background:var(--surface);text-align:center}
+.icon-card svg{width:20px;height:20px;color:var(--text-strong)}
+.icon-card code{overflow-wrap:anywhere;color:var(--text-muted);font-size:11px}
+@media(max-width:900px){.icon-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.icon-grid{grid-template-columns:repeat(2,1fr)}}
