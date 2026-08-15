@@ -1,5 +1,71 @@
-import { ComponentPlaceholderPage } from "@/components/component-placeholder";
+"use client";
+
+import { useState } from "react";
+import { Stepper, type CASStepperVariant, type StepperStep } from "@/components/ui/stepper";
+import { Dropdown } from "@/components/ui/dropdown";
+import { PageHeader } from "@/components/page-header";
+
+const variants: CASStepperVariant[] = ["number", "dot"];
+const FLOW: StepperStep[] = [
+  { label: "Vehicle", status: "done" },
+  { label: "Ownership", status: "active" },
+  { label: "Condition", status: "inactive" },
+  { label: "Get An Offer", status: "inactive" },
+];
 
 export default function StepperPage() {
-  return <ComponentPlaceholderPage eyebrow="COMPONENTS · STEPPER" title="Stepper" description="Guide users through a sequence of steps in a multi-stage flow." />;
+  const [variant, setVariant] = useState<CASStepperVariant>("number");
+
+  return (
+    <>
+      <PageHeader eyebrow="COMPONENTS · STEPPER" title="Stepper" description="A horizontal progress track for a multi-step flow, showing which steps are done, which is active, and which are still ahead." />
+      <section className="button-playground">
+        <div className="component-preview">
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
+          <div className="button-showcase">
+            <div style={{ width: 520 }}><Stepper steps={FLOW} variant={variant} /></div>
+          </div>
+        </div>
+        <aside className="button-controls">
+          <Dropdown label="Variant" size="compact" value={variant} onChange={v => setVariant(v as CASStepperVariant)} options={variants.map(x => ({ value: x, label: x }))} />
+        </aside>
+      </section>
+      <section className="section-block">
+        <p className="section-index">TYPES</p>
+        <h2>Number or dot</h2>
+        <p className="wide-copy">The number variant labels each circle with its step index; the dot variant drops the number for a lighter, more compact track.</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+          {variants.map(x => (
+            <article className="state-demo-card" key={x}>
+              <div style={{ width: "100%" }}><Stepper steps={FLOW} variant={x} /></div>
+              <span className="tag tag-neutral">{x}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section-block">
+        <p className="section-index">STATES</p>
+        <h2>Done, active, and inactive</h2>
+        <p className="wide-copy">A step&apos;s status also colors the connecting line that follows it — cyan once done, muted gray while active, and subtle gray for anything still ahead.</p>
+      </section>
+      <section className="section-block">
+        <p className="section-index">TOKENS & TYPOGRAPHY</p>
+        <h2>Implementation bindings</h2>
+        <div className="button-token-grid">
+          {[["Done circle", "color/action/secondary/base fill · #001939 number"], ["Active circle", "color/action/secondary/base border · canvas fill"], ["Inactive circle", "color/stroke/muted border"], ["Done line", "color/action/secondary/base"], ["Active line", "color/stroke/muted"], ["Inactive line", "color/stroke/subtle"], ["Label", "Nunito Sans · 14 px · Bold 700"]].map(([label, value]) => (
+            <article key={label}><strong>{label}</strong><code>{value}</code></article>
+          ))}
+        </div>
+      </section>
+      <section className="section-block">
+        <p className="section-index">COMPONENT CONTRACT</p>
+        <div className="component-template contract">
+          {["Steps · Ordered list of label + status", "Status · Done, Active, or Inactive", "Variant · Number or Dot"].map((x, i) => (
+            <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>
+          ))}
+        </div>
+        <p className="wide-copy" style={{ marginTop: 16 }}>The Figma source also documents per-step hover states distinguishing reachable vs. unreachable inactive steps — simplified here to a single Inactive status. Flagged as follow-up work if that distinction needs to be interactive.</p>
+      </section>
+    </>
+  );
 }
