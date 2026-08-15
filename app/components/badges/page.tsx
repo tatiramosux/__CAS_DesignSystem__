@@ -21,7 +21,7 @@ export default function BadgesPage() {
       <PageHeader eyebrow="COMPONENTS · BADGE" title="Badges" description="The badge component helps organize and display small bits of information in a clear and attractive way." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
           <div className="button-showcase"><Badge size={size} badgeStyle={badgeStyle} color={color} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Badge</Badge></div>
         </div>
         <aside className="button-controls">

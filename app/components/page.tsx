@@ -2,9 +2,43 @@ import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 
-const linkedComponentPages: Partial<Record<string, string>> = { "Buttons": "/components/buttons", "Text Input": "/components/text-input", "Badges": "/components/badges", "Icon": "/components/icon", "Dropdown": "/components/dropdown" };
+const linkedComponentPages: Partial<Record<string, string>> = {
+  "Accordion": "/components/accordion",
+  "Alerts": "/components/alerts",
+  "Avatars": "/components/avatars",
+  "Badges": "/components/badges",
+  "Breadcrumbs": "/components/breadcrumbs",
+  "Buttons": "/components/buttons",
+  "Card": "/components/card",
+  "Checkbox": "/components/checkbox",
+  "Content Card": "/components/content-card",
+  "Divider": "/components/divider",
+  "Dropdown": "/components/dropdown",
+  "Icon": "/components/icon",
+  "Label": "/components/label",
+  "Loading": "/components/loading",
+  "Pagination": "/components/pagination",
+  "Progress Indicators": "/components/progress-indicators",
+  "Radio Button": "/components/radio-button",
+  "Rating": "/components/rating",
+  "Scroll": "/components/scroll",
+  "Sidebar": "/components/sidebar",
+  "Stepper": "/components/stepper",
+  "Switch": "/components/switch",
+  "Table": "/components/table",
+  "Tabs": "/components/tabs",
+  "Text Area": "/components/text-area",
+  "Text Input": "/components/text-input",
+  "Toggle Button": "/components/toggle-button",
+  "Tooltip": "/components/tooltip",
+};
 
-const catalog = ["Alerts", "Avatars", "Badges", "Buttons", "Breadcrumbs", "Checkbox", "Dropdown", "Icon", "Loading", "Divider", "Pagination", "Progress Indicators", "Radio Button", "Rating", "Scroll", "Sidebar", "Stepper", "Switch", "Table", "Tabs", "Text Area", "Text Input", "Tooltip", "Toggle Button"]
+const underConstructionPages = new Set([
+  "Checkbox", "Card", "Content Card", "Pagination", "Progress Indicators", "Radio Button", "Rating",
+  "Scroll", "Sidebar", "Stepper", "Switch", "Table", "Tabs", "Text Area", "Toggle Button", "Tooltip",
+]);
+
+const catalog = ["Accordion", "Alerts", "Avatars", "Badges", "Buttons", "Breadcrumbs", "Card", "Checkbox", "Content Card", "Dropdown", "Divider", "Icon", "Label", "Loading", "Pagination", "Progress Indicators", "Radio Button", "Rating", "Scroll", "Sidebar", "Stepper", "Switch", "Table", "Tabs", "Text Area", "Text Input", "Tooltip", "Toggle Button"]
   .sort((a, b) => a.localeCompare(b));
 
 export default function ComponentIndex() {
@@ -17,7 +51,12 @@ export default function ComponentIndex() {
         <div className="component-catalog">
           {catalog.map(name => linkedComponentPages[name] ? (
             <Link className="component-card is-linked" key={name} href={linkedComponentPages[name]!}>
-              <strong>{name}</strong><p>CAS component library</p><Badge size="small" color="success">Documentation ready</Badge>
+              <strong>{name}</strong><p>CAS component library</p>
+              {underConstructionPages.has(name) ? (
+                <Badge size="small" color="warning">Under construction</Badge>
+              ) : (
+                <Badge size="small" color="success">Documentation ready</Badge>
+              )}
             </Link>
           ) : (
             <article className="component-card" key={name}><strong>{name}</strong><p>CAS component library</p></article>

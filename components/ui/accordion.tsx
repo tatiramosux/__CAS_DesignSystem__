@@ -41,12 +41,12 @@ export function AccordionItem({ title, subtext, icon, accordionStyle = "outline"
   return (
     <div className={cn("cas-accordion-item", className)}>
       <button type="button" aria-expanded={isOpen} onClick={toggle} className={cn(headerVariants({ accordionStyle }), isOpen && "bg-[color-mix(in_srgb,var(--action-secondary-base)_8%,var(--surface-canvas))]")}>
-        {icon && <FontAwesomeIcon icon={icon} className="size-6 shrink-0 text-[var(--text-strong)]" />}
+        {icon && <FontAwesomeIcon icon={icon} className="size-6 shrink-0 text-[var(--action-secondary-base)]" />}
         <span className="min-w-0 flex-1">
           <span className="block font-body text-base font-black text-[var(--text-strong)]">{title}</span>
           {isOpen && subtext && <span className="mt-1 block font-body text-sm text-[var(--text-subtle)]">{subtext}</span>}
         </span>
-        <FontAwesomeIcon icon={isOpen ? faMinus : faPlus} className="size-4 shrink-0 text-[var(--text-strong)]" />
+        <FontAwesomeIcon icon={isOpen ? faMinus : faPlus} className="size-4 shrink-0 text-[var(--action-secondary-base)]" />
       </button>
     </div>
   );

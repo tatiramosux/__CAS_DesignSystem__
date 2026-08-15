@@ -33,7 +33,7 @@ export default function Buttons() {
       <PageHeader eyebrow="COMPONENTS · BUTTON" title="Button" description="Actions from the CAS Figma component set, mapped to React with the same type, size, state, treatment, label, and icon properties." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
           <div className="button-showcase"><Button buttonType={buttonType} size={buttonSize} state={buttonState} treatment={buttonTreatment} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Button</Button></div>
         </div>
         <aside className="button-controls">

@@ -42,10 +42,10 @@ export function Breadcrumbs({ items, divider = "arrow", className }: Breadcrumbs
                 {item.label}
               </Link>
             ) : (
-              <button type="button" className={cn(crumbClass, "text-[var(--text-subtle)] hover:font-extrabold hover:text-[var(--text-default)] hover:underline")}>
+              <span className={cn(crumbClass, "text-[var(--text-subtle)]")}>
                 {item.icon && <FontAwesomeIcon icon={item.icon} className="size-4" />}
                 {item.label}
-              </button>
+              </span>
             )}
           </span>
         );

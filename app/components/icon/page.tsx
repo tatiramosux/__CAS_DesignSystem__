@@ -17,7 +17,7 @@ export default function IconPage() {
       <PageHeader eyebrow="COMPONENTS · ICON" title="Icon" description="A shared wrapper that standardizes icon sizing wherever an icon is used — buttons, badges, text inputs, or on its own." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
           <div className="button-showcase"><Icon icon={faCar} size={size} /></div>
         </div>
         <aside className="button-controls">

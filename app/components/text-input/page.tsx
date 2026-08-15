@@ -24,7 +24,7 @@ export default function TextInputPage() {
       <PageHeader eyebrow="COMPONENTS · TEXT INPUT" title="Text Input" description="The input field is a key part of forms and user interactions. It lets users enter text, numbers, or make selections, making it an essential tool for gathering information." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
           <div className="button-showcase"><TextInput size={size} state={state} required={required} leadingIcon={leadingIcon} trailingIcon={trailingIcon} showInfo={showInfo} hintText={showHint ? hintText : undefined} /></div>
         </div>
         <aside className="button-controls">

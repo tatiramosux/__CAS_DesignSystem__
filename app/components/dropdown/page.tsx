@@ -5,7 +5,6 @@ import { Dropdown, type CASDropdownSize } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
 
 const sizes: CASDropdownSize[] = ["sm", "compact", "medium", "large"];
-const positions: ("left" | "right")[] = ["left", "right"];
 const fruitOptions = [
   { value: "apple", label: "Apple" },
   { value: "banana", label: "Banana" },
@@ -15,7 +14,6 @@ const fruitOptions = [
 
 export default function DropdownPage() {
   const [size, setSize] = useState<CASDropdownSize>("medium");
-  const [position, setPosition] = useState<"left" | "right">("left");
   const [disabled, setDisabled] = useState(false);
   const [error, setError] = useState(false);
   const [fruit, setFruit] = useState("apple");
@@ -25,16 +23,15 @@ export default function DropdownPage() {
       <PageHeader eyebrow="COMPONENTS · DROPDOWN" title="Dropdown" description="A custom select control with a labeled trigger, a positioned item panel, and full keyboard support — used everywhere the interface needs to choose one value from a list." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
           <div className="button-showcase">
             <div style={{ width: 260 }}>
-              <Dropdown label="Fruit" options={fruitOptions} value={fruit} onChange={setFruit} size={size} position={position} disabled={disabled} error={error} hintText="Pick your favorite" />
+              <Dropdown label="Fruit" options={fruitOptions} value={fruit} onChange={setFruit} size={size} disabled={disabled} error={error} hintText="Pick your favorite" />
             </div>
           </div>
         </div>
         <aside className="button-controls">
           <Dropdown label="Size" size="compact" options={sizes.map(x => ({ value: x, label: x }))} value={size} onChange={v => setSize(v as CASDropdownSize)} />
-          <Dropdown label="Position" size="compact" options={positions.map(x => ({ value: x, label: x }))} value={position} onChange={v => setPosition(v as "left" | "right")} />
           <label className="check-field"><input type="checkbox" checked={error} onChange={e => setError(e.target.checked)} /> Error</label>
           <label className="check-field"><input type="checkbox" checked={disabled} onChange={e => setDisabled(e.target.checked)} /> Disabled</label>
         </aside>
@@ -65,7 +62,7 @@ export default function DropdownPage() {
           {[["Default border", "color/stroke/muted"], ["Hover border", "color/action/secondary/light"], ["Focus / open ring", "color/action/secondary/base"], ["Error border & text", "color/feedback/error/base"], ["Selected item", "color/action/secondary/lighter"], ["Label", "Nunito Sans · 14 px · Bold 700"], ["Corner radius", "radius/12 · 12 px"]].map(([label, value]) => <article key={label}><strong>{label}</strong><code>{value}</code></article>)}
         </div>
       </section>
-      <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Options · Value, label, optional icon, optional disabled", "Position · Left or Right panel alignment", "Size · Small (32), Compact (40), Medium (48), Large (56)", "State · Default, Hover, Focus/Open, Error, Disabled", "Keyboard · Arrow keys move selection, Enter confirms, Escape closes"].map((x, i) => <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>)}</div></section>
+      <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Options · Value, label, optional icon, optional disabled", "Size · Small (32), Compact (40), Medium (48), Large (56)", "State · Default, Hover, Focus/Open, Error, Disabled", "Keyboard · Arrow keys move selection, Enter confirms, Escape closes"].map((x, i) => <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>)}</div></section>
     </>
   );
 }

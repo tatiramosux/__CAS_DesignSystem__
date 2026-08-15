@@ -18,17 +18,13 @@ for (const value of Object.values(solidIcons)) {
 }
 const allIcons: IconDefinition[] = [...byName.values()].sort((a, b) => a.iconName.localeCompare(b.iconName));
 
-const PREVIEW_COUNT = 60;
-const MAX_RESULTS = 240;
-
 export default function VisualAssetsIcons() {
   const [query, setQuery] = useState("");
-  const matches = useMemo(() => {
+  const visible = useMemo(() => {
     const trimmed = query.trim().toLowerCase();
-    if (!trimmed) return allIcons.slice(0, PREVIEW_COUNT);
+    if (!trimmed) return allIcons;
     return allIcons.filter(icon => icon.iconName.includes(trimmed));
   }, [query]);
-  const visible = matches.slice(0, MAX_RESULTS);
   const isSearching = query.trim().length > 0;
 
   return (
@@ -51,8 +47,8 @@ export default function VisualAssetsIcons() {
         />
         <p className="wide-copy">
           {isSearching
-            ? `${matches.length} match${matches.length === 1 ? "" : "es"}${matches.length > MAX_RESULTS ? ` · showing first ${MAX_RESULTS}, refine your search` : ""}`
-            : `Showing ${PREVIEW_COUNT} of ${allIcons.length} icons · type to search the full set`}
+            ? `${visible.length} match${visible.length === 1 ? "" : "es"}`
+            : `All ${allIcons.length} icons`}
         </p>
         <div className="icon-grid">
           {visible.map(icon => (

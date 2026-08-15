@@ -20,12 +20,8 @@ const alertVariants = cva(
         information: "[--alert-bg:var(--feedback-info-lighter)] [--alert-border:var(--feedback-info-light)] [--alert-icon:var(--feedback-info-base)]",
         neutral: "[--alert-bg:var(--action-neutral-lighter)] [--alert-border:var(--action-neutral-light)] [--alert-icon:var(--text-muted)]",
       },
-      layout: {
-        vertical: "flex-col items-start gap-3",
-        horizontal: "flex-row items-center gap-3",
-      },
     },
-    defaultVariants: { color: "primary", layout: "vertical" },
+    defaultVariants: { color: "primary" },
   }
 );
 
@@ -52,31 +48,51 @@ export interface AlertProps extends Omit<VariantProps<typeof alertVariants>, "co
   className?: string;
 }
 
-export function Alert({ color = "primary", layout = "vertical", icon, title, description, actionLabel, onAction, dismissible, onDismiss, className }: AlertProps) {
-  const isHorizontal = layout === "horizontal";
+function DismissButton({ onDismiss }: { onDismiss?: () => void }) {
   return (
-    <div className={cn(alertVariants({ color, layout }), className)}>
-      <FontAwesomeIcon icon={icon ?? defaultIcon[color]} className="size-6 shrink-0 text-[var(--alert-icon)]" />
-      <div className={cn("flex min-w-0 flex-1", isHorizontal ? "items-center justify-between gap-3" : "flex-col gap-2")}>
-        <div className={cn(isHorizontal ? "flex items-center gap-3" : "flex flex-col gap-1")}>
+    <button type="button" onClick={onDismiss} aria-label="Dismiss" className="flex size-6 shrink-0 items-center justify-center rounded-md text-[var(--text-muted)] shadow-[0_1px_1px_rgba(25,25,28,0.04)] hover:bg-black/5">
+      <FontAwesomeIcon icon={faXmark} className="size-3" />
+    </button>
+  );
+}
+
+export function Alert({ color = "primary", layout = "vertical", icon, title, description, actionLabel, onAction, dismissible, onDismiss, className }: AlertProps) {
+  const iconEl = <FontAwesomeIcon icon={icon ?? defaultIcon[color]} className="size-6 shrink-0 text-[var(--alert-icon)]" />;
+  const actionEl = actionLabel && (
+    <button type="button" onClick={onAction} className="self-start font-body text-sm font-extrabold text-[var(--text-strong)]">{actionLabel}</button>
+  );
+
+  if (layout === "horizontal") {
+    return (
+      <div className={cn(alertVariants({ color }), "flex-row items-center gap-3", className)}>
+        {iconEl}
+        <div className="flex min-w-0 flex-1 items-center gap-3">
           <span className="font-body text-xs font-bold text-[var(--text-strong)]">{title}</span>
-          {!isHorizontal && description && <span className="font-body text-[10px] text-[var(--text-default)] opacity-80">{description}</span>}
-          {isHorizontal && actionLabel && (
-            <button type="button" onClick={onAction} className="font-body text-sm font-extrabold text-[var(--text-strong)]">{actionLabel}</button>
-          )}
+          {actionEl}
         </div>
-        {!isHorizontal && actionLabel && (
-          <button type="button" onClick={onAction} className="font-body text-sm font-extrabold text-[var(--text-strong)]">{actionLabel}</button>
+        {dismissible && (
+          <>
+            <div className="h-5 w-px shrink-0 bg-[var(--alert-border)]" aria-hidden="true" />
+            <DismissButton onDismiss={onDismiss} />
+          </>
         )}
       </div>
-      {dismissible && (
-        <>
-          {isHorizontal && <div className="h-5 w-px shrink-0 bg-[var(--alert-border)]" aria-hidden="true" />}
-          <button type="button" onClick={onDismiss} aria-label="Dismiss" className="flex size-6 shrink-0 items-center justify-center rounded-md text-[var(--text-muted)] shadow-[0_1px_1px_rgba(25,25,28,0.04)] hover:bg-black/5">
-            <FontAwesomeIcon icon={faXmark} className="size-3" />
-          </button>
-        </>
-      )}
+    );
+  }
+
+  return (
+    <div className={cn(alertVariants({ color }), "flex-col gap-3", className)}>
+      <div className="flex items-center justify-between">
+        {iconEl}
+        {dismissible && <DismissButton onDismiss={onDismiss} />}
+      </div>
+      <div className="flex flex-col items-start gap-2">
+        <div className="flex flex-col gap-1">
+          <span className="font-body text-xs font-bold text-[var(--text-strong)]">{title}</span>
+          {description && <span className="font-body text-[10px] text-[var(--text-default)] opacity-80">{description}</span>}
+        </div>
+        {actionEl}
+      </div>
     </div>
   );
 }
