@@ -4,15 +4,12 @@ import { useState } from "react";
 import { Badge, type CASBadgeSize, type CASBadgeStyle, type CASBadgeColor } from "@/components/ui/badge";
 import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
-import { themes } from "@/app/token-data";
-import { useTheme } from "@/components/theme-context";
 
 const sizes: CASBadgeSize[] = ["medium", "small"];
 const styles: CASBadgeStyle[] = ["strong", "fill", "border"];
 const colors: CASBadgeColor[] = ["primary", "secondary", "danger", "success", "warning", "information", "neutral", "inverse"];
 
 export default function BadgesPage() {
-  const { theme } = useTheme();
   const [size, setSize] = useState<CASBadgeSize>("medium");
   const [badgeStyle, setBadgeStyle] = useState<CASBadgeStyle>("fill");
   const [color, setColor] = useState<CASBadgeColor>("primary");
@@ -24,7 +21,7 @@ export default function BadgesPage() {
       <PageHeader eyebrow="COMPONENTS · BADGE" title="Badges" description="The badge component helps organize and display small bits of information in a clear and attractive way." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Interactive preview</span><span>{themes.find(t => t.id === theme)?.label} · current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
           <div className="button-showcase"><Badge size={size} badgeStyle={badgeStyle} color={color} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Badge</Badge></div>
         </div>
         <aside className="button-controls">

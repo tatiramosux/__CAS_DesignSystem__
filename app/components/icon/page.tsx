@@ -5,14 +5,11 @@ import { Icon, type CASIconSize } from "@/components/ui/icon";
 import { Dropdown } from "@/components/ui/dropdown";
 import { faCar } from "@fortawesome/free-solid-svg-icons";
 import { PageHeader } from "@/components/page-header";
-import { themes } from "@/app/token-data";
-import { useTheme } from "@/components/theme-context";
 
 const sizes: CASIconSize[] = ["sm", "md", "lg"];
 const sizeSpecs: Record<CASIconSize, string> = { sm: "16 px", md: "20 px", lg: "24 px" };
 
 export default function IconPage() {
-  const { theme } = useTheme();
   const [size, setSize] = useState<CASIconSize>("md");
 
   return (
@@ -20,7 +17,7 @@ export default function IconPage() {
       <PageHeader eyebrow="COMPONENTS · ICON" title="Icon" description="A shared wrapper that standardizes icon sizing wherever an icon is used — buttons, badges, text inputs, or on its own." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Interactive preview</span><span>{themes.find(t => t.id === theme)?.label} · current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
           <div className="button-showcase"><Icon icon={faCar} size={size} /></div>
         </div>
         <aside className="button-controls">

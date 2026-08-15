@@ -5,14 +5,11 @@ import { TextInput, type CASTextInputSize, type CASTextInputState } from "@/comp
 import { Badge } from "@/components/ui/badge";
 import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
-import { themes } from "@/app/token-data";
-import { useTheme } from "@/components/theme-context";
 
 const sizes: CASTextInputSize[] = ["medium", "large"];
 const states: CASTextInputState[] = ["default", "hover", "focus", "filled", "error", "disabled"];
 
 export default function TextInputPage() {
-  const { theme } = useTheme();
   const [size, setSize] = useState<CASTextInputSize>("medium");
   const [state, setState] = useState<CASTextInputState>("default");
   const [leadingIcon, setLeadingIcon] = useState(true);
@@ -27,7 +24,7 @@ export default function TextInputPage() {
       <PageHeader eyebrow="COMPONENTS · TEXT INPUT" title="Text Input" description="The input field is a key part of forms and user interactions. It lets users enter text, numbers, or make selections, making it an essential tool for gathering information." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Interactive preview</span><span>{themes.find(t => t.id === theme)?.label} · current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
           <div className="button-showcase"><TextInput size={size} state={state} required={required} leadingIcon={leadingIcon} trailingIcon={trailingIcon} showInfo={showInfo} hintText={showHint ? hintText : undefined} /></div>
         </div>
         <aside className="button-controls">

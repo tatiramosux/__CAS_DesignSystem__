@@ -25,7 +25,7 @@ export default function DropdownPage() {
       <PageHeader eyebrow="COMPONENTS · DROPDOWN" title="Dropdown" description="A custom select control with a labeled trigger, a positioned item panel, and full keyboard support — used everywhere the interface needs to choose one value from a list." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Interactive preview</span><span>CarBrain · current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
           <div className="button-showcase">
             <div style={{ width: 260 }}>
               <Dropdown label="Fruit" options={fruitOptions} value={fruit} onChange={setFruit} size={size} position={position} disabled={disabled} error={error} hintText="Pick your favorite" />

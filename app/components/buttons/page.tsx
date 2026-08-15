@@ -5,8 +5,6 @@ import { Button, type CASButtonSize, type CASButtonState, type CASButtonTreatmen
 import { Badge } from "@/components/ui/badge";
 import { Dropdown } from "@/components/ui/dropdown";
 import { PageHeader } from "@/components/page-header";
-import { themes } from "@/app/token-data";
-import { useTheme } from "@/components/theme-context";
 
 const types: CASButtonType[] = ["primary", "secondary", "tertiary", "danger", "neutral"];
 const sizes: CASButtonSize[] = ["large", "medium", "small"];
@@ -21,7 +19,6 @@ const groups: { type: CASButtonType; treatment: CASButtonTreatment; label: strin
 ];
 
 export default function Buttons() {
-  const { theme } = useTheme();
   const [buttonType, setButtonType] = useState<CASButtonType>("primary");
   const [buttonSize, setButtonSize] = useState<CASButtonSize>("medium");
   const [buttonState, setButtonState] = useState<CASButtonState>("default");
@@ -36,7 +33,7 @@ export default function Buttons() {
       <PageHeader eyebrow="COMPONENTS · BUTTON" title="Button" description="Actions from the CAS Figma component set, mapped to React with the same type, size, state, treatment, label, and icon properties." />
       <section className="button-playground">
         <div className="component-preview">
-          <div className="preview-bar"><span>Interactive preview</span><span>{themes.find(t => t.id === theme)?.label} · current theme</span></div>
+          <div className="preview-bar"><span>Playground</span><span>current theme</span></div>
           <div className="button-showcase"><Button buttonType={buttonType} size={buttonSize} state={buttonState} treatment={buttonTreatment} leadingIcon={leadingIcon} trailingIcon={trailingIcon}>Button</Button></div>
         </div>
         <aside className="button-controls">
