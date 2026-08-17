@@ -73,7 +73,7 @@ export default function CardPage() {
       <section className="section-block">
         <p className="section-index">FOOTER</p>
         <h2>Optional slot placeholders</h2>
-        <p className="wide-copy">The footer holds one or two generic &quot;Slot&quot; placeholders, meant to be swapped for real actions (buttons, links) per use case.</p>
+        <p className="wide-copy">The footer holds one or two generic &quot;Slot&quot; placeholders, meant to be swapped for real actions (buttons, links) per use case. This is how Slot behaves: it&apos;s an optional placeholder component — replace it with any component, or hide it if not needed.</p>
         <div className="state-demo-grid">
           <article className="state-demo-card"><div style={{ width: "100%" }}><Card title="Fast Lane" description="Save time, Enter your VIN number." footerSlots={1} /></div><span className="tag tag-neutral">1 slot</span></article>
           <article className="state-demo-card"><div style={{ width: "100%" }}><Card title="Fast Lane" description="Save time, Enter your VIN number." footerSlots={2} /></div><span className="tag tag-neutral">2 slots</span></article>
