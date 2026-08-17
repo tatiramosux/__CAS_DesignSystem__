@@ -36,8 +36,7 @@ export default function MaintainersPage() {
                 <span style={{ display: "block", color: "var(--text-muted)", fontSize: 12, marginTop: 2 }}>{person.subtitle}</span>
               </div>
               <p style={{ margin: 0, color: "var(--text-muted)", fontSize: 13, lineHeight: 1.55 }}>{person.description}</p>
-              <a href={teamsChatLink(person.email)} target="_blank" rel="noreferrer" className="resource-row" style={{ marginTop: "auto" }}>
-                <span>{person.email}</span>
+              <a href={teamsChatLink(person.email)} target="_blank" rel="noreferrer" className="resource-row" style={{ marginTop: "auto", justifyContent: "center" }}>
                 <b>Contact via Teams <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></b>
               </a>
             </article>
