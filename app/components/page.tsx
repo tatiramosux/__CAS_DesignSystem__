@@ -34,7 +34,7 @@ const linkedComponentPages: Partial<Record<string, string>> = {
 };
 
 const underConstructionPages = new Set([
-  "Checkbox", "Card", "Content Card", "Pagination", "Progress Indicators", "Radio Button", "Rating",
+  "Checkbox", "Content Card", "Pagination", "Progress Indicators", "Radio Button", "Rating",
   "Scroll", "Switch", "Table", "Tabs", "Text Area", "Toggle Button", "Tooltip",
 ]);
 

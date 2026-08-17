@@ -1,13 +1,14 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp, faImage, faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Pill } from "@/components/ui/pill";
 
-export type CASCardVariant = "media-title" | "title-only" | "title-pills" | "title-input";
-export type CASCardOrientation = "vertical" | "horizontal";
+export type CASCardImagePosition = "top" | "bottom" | "left" | "none";
+export type CASCardContent = "description" | "pills" | "input";
+export type CASCardPillSize = "large" | "small";
 export type CASCardState = "default" | "hover" | "select";
 
 export interface CardPillOption {
@@ -25,54 +26,119 @@ const cardVariants = cva(
         hover: "border-[color-mix(in_srgb,var(--action-secondary-base)_24%,transparent)]",
         select: "border-[var(--action-secondary-base)] bg-[var(--action-secondary-lighter)]",
       },
-      orientation: {
-        vertical: "flex-col",
-        horizontal: "flex-row",
+      imagePosition: {
+        top: "flex-col",
+        bottom: "flex-col",
+        left: "flex-row",
+        none: "flex-col",
       },
     },
-    defaultVariants: { state: "default", orientation: "vertical" },
+    defaultVariants: { state: "default", imagePosition: "none" },
   }
 );
 
+function PlaceholderImage({ className }: { className?: string }) {
+  return (
+    <div className={cn("flex flex-1 items-center justify-center bg-[var(--surface-subtle)]", className)}>
+      <FontAwesomeIcon icon={faImage} className="size-6 text-[var(--text-strong)]" />
+    </div>
+  );
+}
+
+function CheckboxDot({ className }: { className?: string }) {
+  return <span className={cn("size-5 shrink-0 rounded-full border-[1.25px] border-[color-mix(in_srgb,var(--text-muted)_24%,transparent)] bg-[var(--surface-canvas)] shadow-[0_1px_2px_rgba(25,25,28,0.04)]", className)} />;
+}
+
+function FooterSlot() {
+  return (
+    <div className="flex flex-1 items-center justify-center gap-2 rounded-md border border-dashed border-[var(--action-primary-base)] bg-[var(--action-primary-lighter)] px-2 py-2.5 text-[var(--action-primary-base)]">
+      <FontAwesomeIcon icon={faPuzzlePiece} className="size-4" />
+      <span className="font-body text-xs">Slot</span>
+    </div>
+  );
+}
+
 export interface CardProps {
-  variant: CASCardVariant;
-  orientation?: CASCardOrientation;
   state?: CASCardState;
-  title: string;
-  description?: string;
+  image?: CASCardImagePosition;
   imageSrc?: string;
+  checkbox?: boolean;
+  title: string;
+  chevron?: boolean;
+  content?: CASCardContent;
+  description?: string;
   pills?: CardPillOption[];
-  placeholder?: string;
+  pillSize?: CASCardPillSize;
+  textAreaPlaceholder?: string;
+  footerSlots?: 0 | 1 | 2;
   className?: string;
   style?: React.CSSProperties;
 }
 
-export function Card({ variant, orientation = "vertical", state = "default", title, description, imageSrc, pills, placeholder = "Type here…", className, style }: CardProps) {
-  const isMedia = variant === "media-title";
+export function Card({
+  state = "default",
+  image = "none",
+  imageSrc,
+  checkbox = true,
+  title,
+  chevron = false,
+  content = "description",
+  description,
+  pills,
+  pillSize = "large",
+  textAreaPlaceholder = "Placeholder",
+  footerSlots = 0,
+  className,
+  style,
+}: CardProps) {
+  const thumbnailSize = pillSize === "large" ? "size-[67px]" : "size-11";
+  const inlineThumbnail = content !== "description" && (
+    <div className={cn("flex shrink-0 items-center justify-center overflow-hidden rounded-lg border border-dashed border-[var(--stroke-muted)] bg-[var(--surface-subtle)]", thumbnailSize)}>
+      {imageSrc ? <img src={imageSrc} alt="" className="size-full object-cover" /> : <FontAwesomeIcon icon={faImage} className="size-4 text-[var(--text-strong)]" />}
+    </div>
+  );
+
+  const titleRow = (
+    <div className="flex w-full items-center gap-3">
+      {checkbox && <CheckboxDot />}
+      {inlineThumbnail}
+      <span className={cn("min-w-0 flex-1 font-body text-[var(--text-strong)]", content === "description" ? "text-lg font-bold text-[var(--text-strong)]" : "text-base font-black")}>{title}</span>
+      {chevron && <FontAwesomeIcon icon={faChevronUp} className="size-6 shrink-0 text-[var(--text-strong)]" />}
+    </div>
+  );
+
   return (
-    <div className={cn(cardVariants({ state, orientation: isMedia ? orientation : "vertical" }), className)} style={style}>
-      {isMedia && (
-        <div className={cn("shrink-0 bg-[var(--surface-subtle)]", orientation === "vertical" ? "h-[140px] w-full" : "h-full w-[140px]")}>
-          {imageSrc && <img src={imageSrc} alt="" className="size-full object-cover" />}
+    <div className={cn(cardVariants({ state, imagePosition: image }), className)} style={style}>
+      {image === "top" && <PlaceholderImage className="h-[150px] w-full shrink-0" />}
+      {image === "left" && <PlaceholderImage className="h-full w-[140px] shrink-0" />}
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className={cn("flex flex-col gap-1 p-4", content === "input" && "border-b border-[color-mix(in_srgb,var(--text-muted)_24%,transparent)] py-3")}>
+          <div className="flex flex-col gap-3.5">
+            {titleRow}
+            {content === "description" && <div className="h-px w-full bg-[var(--stroke-subtle)]" />}
+            {content === "description" && description && <p className="m-0 font-body text-sm text-[var(--text-muted)]">{description}</p>}
+          </div>
         </div>
-      )}
-      <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex items-center gap-2">
-          <span className="min-w-0 flex-1 truncate font-body text-base font-black text-[var(--text-strong)]">{title}</span>
-          {variant === "title-pills" && <FontAwesomeIcon icon={faChevronUp} className="size-4 shrink-0 text-[var(--text-muted)]" />}
-        </div>
-        {description && <p className="m-0 font-body text-sm text-[var(--text-default)]">{description}</p>}
-        {variant === "title-pills" && pills && (
-          <div className="flex flex-wrap gap-1.5">
+        {content === "pills" && pills && (
+          <div className="flex flex-wrap gap-2 p-4 pt-0">
             {pills.map(p => (
               <Pill key={p.label} icon={p.icon} selected={p.selected}>{p.label}</Pill>
             ))}
           </div>
         )}
-        {variant === "title-input" && (
-          <div className="rounded-md border border-[var(--stroke-muted)] bg-[var(--surface-canvas)] p-2.5 shadow-[0_1px_2px_rgba(25,25,28,0.04)]">
-            <textarea readOnly placeholder={placeholder} rows={3} className="w-full resize-none bg-transparent font-body text-sm text-[var(--text-default)] outline-none placeholder:text-[var(--text-muted)]" />
-            <div className="mt-1 text-right font-body text-[10px] text-[var(--text-muted)]">0/120</div>
+        {content === "input" && (
+          <div className="p-4">
+            <div className="rounded-md border-[1.5px] border-[var(--stroke-muted)] bg-[var(--surface-canvas)] p-3 shadow-[0_1px_2px_rgba(25,25,28,0.04)]">
+              <textarea readOnly placeholder={textAreaPlaceholder} rows={3} className="w-full resize-none bg-transparent font-body text-sm text-[var(--text-subtle)] outline-none placeholder:text-[var(--text-subtle)]" />
+              <div className="mt-1 text-right font-body text-xs text-[var(--text-subtle)]">0/120</div>
+            </div>
+          </div>
+        )}
+        {image === "bottom" && <PlaceholderImage className="h-[150px] w-full shrink-0" />}
+        {footerSlots > 0 && (
+          <div className="flex items-center justify-end gap-2 p-4">
+            <FooterSlot />
+            {footerSlots === 2 && <FooterSlot />}
           </div>
         )}
       </div>

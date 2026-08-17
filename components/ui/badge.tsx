@@ -29,7 +29,7 @@ const badgeVariants = cva(
       },
       size: {
         medium: "px-1.5 py-1 text-sm leading-4",
-        small: "px-1.5 py-0.5 text-xs leading-[1.5] [&_svg]:size-4",
+        small: "px-1.5 py-1 text-xs leading-[1.5]",
       },
     },
     compoundVariants: [{ color: "inverse", badgeStyle: "strong", className: "border-[var(--badge-soft-border)]" }],

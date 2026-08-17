@@ -51,7 +51,7 @@ export interface AlertProps extends Omit<VariantProps<typeof alertVariants>, "co
 function DismissButton({ onDismiss }: { onDismiss?: () => void }) {
   return (
     <button type="button" onClick={onDismiss} aria-label="Dismiss" className="flex size-6 shrink-0 items-center justify-center rounded-md text-[var(--text-muted)] shadow-[0_1px_1px_rgba(25,25,28,0.04)] hover:bg-black/5">
-      <FontAwesomeIcon icon={faXmark} className="size-3" />
+      <FontAwesomeIcon icon={faXmark} className="size-4" />
     </button>
   );
 }
@@ -81,18 +81,16 @@ export function Alert({ color = "primary", layout = "vertical", icon, title, des
   }
 
   return (
-    <div className={cn(alertVariants({ color }), "flex-col gap-3", className)}>
-      <div className="flex items-center justify-between">
-        {iconEl}
-        {dismissible && <DismissButton onDismiss={onDismiss} />}
-      </div>
-      <div className="flex flex-col items-start gap-2">
-        <div className="flex flex-col gap-1">
+    <div className={cn(alertVariants({ color }), "items-start gap-3", className)}>
+      {iconEl}
+      <div className="flex min-w-0 flex-1 flex-col items-start gap-3">
+        <div className="flex w-full flex-col gap-2">
           <span className="font-body text-xs font-bold text-[var(--text-strong)]">{title}</span>
           {description && <span className="font-body text-[10px] text-[var(--text-default)] opacity-80">{description}</span>}
         </div>
         {actionEl}
       </div>
+      {dismissible && <DismissButton onDismiss={onDismiss} />}
     </div>
   );
 }
