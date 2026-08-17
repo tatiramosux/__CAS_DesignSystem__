@@ -64,7 +64,7 @@ export default function AvatarsPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {["Type · Image, Text, or Placeholder", "Size · 16, 20, 24, 28, 32, 40, 48 px", "Shape · Circle, photo or fill clipped to bounds"].map((x, i) => (
             <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>

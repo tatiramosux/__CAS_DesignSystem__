@@ -81,7 +81,7 @@ export default function LabelPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {[
             "Label · Editable text",

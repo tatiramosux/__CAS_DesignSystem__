@@ -62,7 +62,7 @@ export default function DropdownPage() {
           {[["Default border", "color/stroke/muted"], ["Hover border", "color/action/secondary/light"], ["Focus / open ring", "color/action/secondary/base"], ["Error border & text", "color/feedback/error/base"], ["Selected item", "color/action/secondary/lighter"], ["Label", "Nunito Sans · 14 px · Bold 700"], ["Corner radius", "radius/12 · 12 px"]].map(([label, value]) => <article key={label}><strong>{label}</strong><code>{value}</code></article>)}
         </div>
       </section>
-      <section className="section-block"><p className="section-index">COMPONENT CONTRACT</p><div className="component-template contract">{["Options · Value, label, optional icon, optional disabled", "Size · Small (32), Compact (40), Medium (48), Large (56)", "State · Default, Hover, Focus/Open, Error, Disabled", "Keyboard · Arrow keys move selection, Enter confirms, Escape closes"].map((x, i) => <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>)}</div></section>
+      <section className="section-block"><p className="section-index">COMPONENT STRUCTURE</p><div className="component-template contract">{["Options · Value, label, optional icon, optional disabled", "Size · Small (32), Compact (40), Medium (48), Large (56)", "State · Default, Hover, Focus/Open, Error, Disabled", "Keyboard · Arrow keys move selection, Enter confirms, Escape closes"].map((x, i) => <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>)}</div></section>
     </>
   );
 }

@@ -63,7 +63,7 @@ export default function AlertsPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {["Title · Editable text", "Description · Optional, Vertical layout only", "Color · Primary, Secondary, Error, Success, Warning, Information, Neutral", "Layout · Vertical or Horizontal", "Action · Optional inline text button", "Dismissible · Optional close control"].map((x, i) => (
             <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>

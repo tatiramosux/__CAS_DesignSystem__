@@ -52,7 +52,7 @@ export default function BreadcrumbsPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {["Items · Ordered list of label, optional href, optional icon", "Divider · Arrow or Slash", "Last item · Always rendered as the current, non-interactive page"].map((x, i) => (
             <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>

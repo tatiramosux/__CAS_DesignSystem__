@@ -37,7 +37,7 @@ export default function ContentCardPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {["Label · Editable text, truncates on overflow", "Media · Optional fixed 69×38 px thumbnail"].map((x, i) => (
             <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>

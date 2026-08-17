@@ -60,7 +60,7 @@ export default function DividerPage() {
         </div>
       </section>
       <section className="section-block">
-        <p className="section-index">COMPONENT CONTRACT</p>
+        <p className="section-index">COMPONENT STRUCTURE</p>
         <div className="component-template contract">
           {["Orientation · Horizontal or Vertical", "Style · Line (solid) or Dotted"].map((x, i) => (
             <div key={x}><span>{String(i + 1).padStart(2, "0")}</span>{x}</div>
