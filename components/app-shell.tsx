@@ -58,7 +58,11 @@ const nav: NavGroup[] = [
       .sort((a, b) => a.label.localeCompare(b.label)),
   ] },
   { label: "Templates", mark: "05", items: [{ href: "/templates", label: "Templates index" }] },
-  { label: "Resources", mark: "06", items: [{ href: "/resources", label: "Libraries & tools" }] },
+  { label: "Prototype", mark: "06", items: [{ href: "/prototype", label: "Prototype index" }] },
+  { label: "Resources", mark: "07", items: [
+    { href: "/resources", label: "Libraries & tools" },
+    { href: "/resources/maintainers", label: "Design Library Maintainers" },
+  ] },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
