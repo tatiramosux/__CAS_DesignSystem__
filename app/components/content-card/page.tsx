@@ -15,7 +15,11 @@ const MEDIA =
 export default function ContentCardPage() {
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · CONTENT CARD" title="Content Card" description="A compact, single-row card pairing a bold label with a fixed-size media or icon slot — for list and media-row layouts." />
+      <PageHeader eyebrow="COMPONENTS · CONTENT CARD" title="Content Card" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A content card is a container that groups related information into a distinct unit, making content easier to identify, scan, and interact with.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A compact, single-row card pairing a bold label with a fixed-size media or icon slot — for list and media-row layouts.</p>
       <div style={{ marginBottom: 24 }}>
         <Badge size="small" color="warning">Partially implemented</Badge>
       </div>

@@ -21,7 +21,11 @@ export default function TextInputPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · TEXT INPUT" title="Text Input" description="The input field is a key part of forms and user interactions. It lets users enter text, numbers, or make selections, making it an essential tool for gathering information." />
+      <PageHeader eyebrow="COMPONENTS · TEXT INPUT" title="Text Input" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A text input is a form control that allows users to enter and edit a single line of text.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">The input field is a key part of forms and user interactions. It lets users enter text, numbers, or make selections, making it an essential tool for gathering information.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

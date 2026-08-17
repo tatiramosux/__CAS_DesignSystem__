@@ -20,7 +20,11 @@ export default function StepperPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · STEPPER" title="Stepper" description="A horizontal progress track for a multi-step flow, showing which steps are done, which is active, and which are still ahead." />
+      <PageHeader eyebrow="COMPONENTS · STEPPER" title="Stepper" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A stepper is a control that allows users to increase or decrease a numeric value within a defined range.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A horizontal progress track for a multi-step flow, showing which steps are done, which is active, and which are still ahead.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

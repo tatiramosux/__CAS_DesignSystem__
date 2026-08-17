@@ -16,7 +16,11 @@ export default function AlertsPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · ALERT" title="Alerts" description="Alerts come in seven types — Primary, Secondary, Error, Success, Warning, Information, and Default — and two layouts: Vertical and Horizontal." />
+      <PageHeader eyebrow="COMPONENTS · ALERT" title="Alerts" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">An alert is a message that communicates important information, changes, warnings, or feedback that requires the user&apos;s attention.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">Alerts come in seven types — Primary, Secondary, Error, Success, Warning, Information, and Default — and two layouts: Vertical and Horizontal.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

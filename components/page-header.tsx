@@ -10,7 +10,7 @@ function toTitleCase(shouting: string) {
   return shouting.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
 }
 
-export function PageHeader({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
+export function PageHeader({ eyebrow, title, description }: { eyebrow: string; title: string; description?: string }) {
   const [sectionRaw, pageRaw] = eyebrow.split(" · ");
   const isHub = pageRaw === "INDEX";
   const items = sectionRaw
@@ -24,7 +24,7 @@ export function PageHeader({ eyebrow, title, description }: { eyebrow: string; t
       {items && <Breadcrumbs items={items} className="page-breadcrumb" />}
       <p className="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
-      <p className="lead">{description}</p>
+      {description && <p className="lead">{description}</p>}
     </header>
   );
 }

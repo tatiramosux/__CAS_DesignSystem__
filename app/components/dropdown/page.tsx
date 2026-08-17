@@ -20,7 +20,11 @@ export default function DropdownPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · DROPDOWN" title="Dropdown" description="A custom select control with a labeled trigger, a positioned item panel, and full keyboard support — used everywhere the interface needs to choose one value from a list." />
+      <PageHeader eyebrow="COMPONENTS · DROPDOWN" title="Dropdown" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A dropdown is a selection control that reveals a list of predefined options and allows users to choose an available value.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A custom select control with a labeled trigger, a positioned item panel, and full keyboard support — used everywhere the interface needs to choose one value from a list.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

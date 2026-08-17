@@ -14,7 +14,11 @@ export default function BreadcrumbsPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · BREADCRUMBS" title="Breadcrumbs" description="Shows the user's current location within a hierarchy and displays three states: Default, Hover, and Selected." />
+      <PageHeader eyebrow="COMPONENTS · BREADCRUMBS" title="Breadcrumbs" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">Breadcrumbs are a sequence of navigational links that show the user&apos;s current location within a hierarchy and provide a path back to previous levels.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">Shows the user&apos;s current location within a hierarchy and displays three states: Default, Hover, and Selected.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

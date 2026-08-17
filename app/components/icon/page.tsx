@@ -14,7 +14,11 @@ export default function IconPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · ICON" title="Icon" description="A shared wrapper that standardizes icon sizing wherever an icon is used — buttons, badges, text inputs, or on its own." />
+      <PageHeader eyebrow="COMPONENTS · ICON" title="Icon" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">An icon is a graphical symbol that visually represents an object, action, status, or concept within an interface.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A shared wrapper that standardizes icon sizing wherever an icon is used — buttons, badges, text inputs, or on its own.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

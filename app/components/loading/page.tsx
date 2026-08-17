@@ -12,7 +12,11 @@ export default function LoadingPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · LOADING" title="Loading" description="Our spinner comes in two styles: Round and Dots — used to indicate an in-progress state where no determinate progress can be shown." />
+      <PageHeader eyebrow="COMPONENTS · LOADING" title="Loading" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A loading indicator is visual feedback that communicates that a process is in progress while the interface or content is not yet ready.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">Our spinner comes in two styles: Round and Dots — used to indicate an in-progress state where no determinate progress can be shown.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

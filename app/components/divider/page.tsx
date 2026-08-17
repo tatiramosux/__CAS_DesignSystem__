@@ -14,7 +14,11 @@ export default function DividerPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · DIVIDER" title="Divider" description="A thin separator line that groups or separates content. Our divider comes in two styles: Line and Dotted." />
+      <PageHeader eyebrow="COMPONENTS · DIVIDER" title="Divider" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">A divider is a visual separator that creates a clear distinction between related sections, groups, or areas of content.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A thin separator line that groups or separates content. Our divider comes in two styles: Line and Dotted.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

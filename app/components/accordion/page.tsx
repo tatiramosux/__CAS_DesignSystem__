@@ -18,7 +18,11 @@ export default function AccordionPage() {
 
   return (
     <>
-      <PageHeader eyebrow="COMPONENTS · ACCORDION" title="Accordion" description="A collapsible header that reveals supporting text on demand. The accordion has three states: Default, Hover, and Expanded." />
+      <PageHeader eyebrow="COMPONENTS · ACCORDION" title="Accordion" />
+      <p className="section-index">DESCRIPTION</p>
+      <p className="wide-copy">An accordion is a set of expandable sections that organizes related content, allowing users to reveal or hide information as needed.</p>
+      <p className="section-index">PLAYGROUND MODE</p>
+      <p className="wide-copy">A collapsible header that reveals supporting text on demand. The accordion has three states: Default, Hover, and Expanded.</p>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
