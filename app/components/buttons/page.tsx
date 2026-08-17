@@ -31,10 +31,12 @@ export default function Buttons() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · BUTTON" title="Button" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">A button is an interactive control that allows users to trigger an action or initiate a process.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">Actions from the CAS Figma component set, mapped to React with the same type, size, state, treatment, label, and icon properties.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

@@ -18,10 +18,12 @@ export default function SidebarPage() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · SIDEBAR" title="Sidebar" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">A sidebar is a secondary interface area that provides access to navigation, controls, or contextual information alongside the primary content.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">A collapsible navigation panel built from two parts: a Header (title, collapse control, and description) and a Content list of items — each with its own size, state, and optional sub-items.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

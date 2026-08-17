@@ -19,10 +19,12 @@ export default function BadgesPage() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · BADGE" title="Badges" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">A badge is a small label that communicates status, properties, categories, or other metadata associated with an element.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">The badge component helps organize and display small bits of information in a clear and attractive way.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

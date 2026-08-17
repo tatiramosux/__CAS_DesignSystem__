@@ -19,10 +19,12 @@ export default function LabelPage() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · LABEL" title="Label" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">A label is a short piece of text that identifies or describes an interface element, typically providing context for an associated control or input.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">The field label and its companion hint text — the title above a field and the informational line below it, reused across Text Input, Dropdown, and any other labeled structure.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

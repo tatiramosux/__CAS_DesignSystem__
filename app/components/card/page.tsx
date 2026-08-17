@@ -21,10 +21,12 @@ export default function CardPage() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · CARD" title="Card" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">A card is a container that groups related content and actions into a single, identifiable unit.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">A flexible container composed from a checkbox, title, and content area — description, pills, or an input — with an optional image and footer slots for arbitrary actions.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>

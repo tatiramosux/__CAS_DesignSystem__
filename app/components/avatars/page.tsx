@@ -25,10 +25,12 @@ export default function AvatarsPage() {
   return (
     <>
       <PageHeader eyebrow="COMPONENTS · AVATAR" title="Avatars" />
+      <div>
       <p className="section-index">DESCRIPTION</p>
       <p className="wide-copy">An avatar is a visual representation of a user or entity, typically displayed as an image, illustration, or initials.</p>
       <p className="section-index">PLAYGROUND MODE</p>
       <p className="wide-copy">Avatars come in three forms, each with a purpose: Image Avatars, Text Avatars, and Placeholder Avatars.</p>
+      </div>
       <section className="button-playground">
         <div className="component-preview">
           <div className="preview-bar"><span>Playground</span><span>Current theme</span></div>
