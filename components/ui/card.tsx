@@ -1,4 +1,7 @@
+"use client";
+
 import * as React from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faImage, faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -39,7 +42,7 @@ const cardVariants = cva(
 
 function PlaceholderImage({ className }: { className?: string }) {
   return (
-    <div className={cn("flex flex-1 items-center justify-center bg-[var(--surface-subtle)]", className)}>
+    <div className={cn("flex shrink-0 grow-0 items-center justify-center bg-[var(--surface-subtle)]", className)}>
       <FontAwesomeIcon icon={faImage} className="size-6 text-[var(--text-strong)]" />
     </div>
   );
@@ -65,6 +68,9 @@ export interface CardProps {
   checkbox?: boolean;
   title: string;
   chevron?: boolean;
+  defaultExpanded?: boolean;
+  expanded?: boolean;
+  onExpandedChange?: (expanded: boolean) => void;
   content?: CASCardContent;
   description?: string;
   pills?: CardPillOption[];
@@ -82,6 +88,9 @@ export function Card({
   checkbox = true,
   title,
   chevron = false,
+  defaultExpanded = true,
+  expanded: expandedProp,
+  onExpandedChange,
   content = "description",
   description,
   pills,
@@ -91,6 +100,9 @@ export function Card({
   className,
   style,
 }: CardProps) {
+  const [internalExpanded, setInternalExpanded] = useState(defaultExpanded);
+  const isExpanded = !chevron || (expandedProp ?? internalExpanded);
+  const toggleExpanded = () => (onExpandedChange ? onExpandedChange(!isExpanded) : setInternalExpanded(o => !o));
   const thumbnailSize = pillSize === "large" ? "size-[67px]" : "size-11";
   const inlineThumbnail = content !== "description" && (
     <div className={cn("flex shrink-0 items-center justify-center overflow-hidden rounded-lg border border-dashed border-[var(--stroke-muted)] bg-[var(--surface-subtle)]", thumbnailSize)}>
@@ -103,30 +115,40 @@ export function Card({
       {checkbox && <CheckboxDot />}
       {inlineThumbnail}
       <span className={cn("min-w-0 flex-1 font-body text-[var(--text-strong)]", content === "description" ? "text-lg font-bold text-[var(--text-strong)]" : "text-base font-black")}>{title}</span>
-      {chevron && <FontAwesomeIcon icon={faChevronUp} className="size-6 shrink-0 text-[var(--text-strong)]" />}
+      {chevron && (
+        <button
+          type="button"
+          aria-label={isExpanded ? "Collapse" : "Expand"}
+          aria-expanded={isExpanded}
+          onClick={toggleExpanded}
+          className="flex size-6 shrink-0 cursor-pointer items-center justify-center"
+        >
+          <FontAwesomeIcon icon={faChevronUp} className={cn("size-6 text-[var(--text-strong)] transition-transform duration-150", !isExpanded && "rotate-180")} />
+        </button>
+      )}
     </div>
   );
 
   return (
     <div className={cn(cardVariants({ state, imagePosition: image }), className)} style={style}>
       {image === "top" && <PlaceholderImage className="h-[150px] w-full shrink-0" />}
-      {image === "left" && <PlaceholderImage className="h-full w-[140px] shrink-0" />}
+      {image === "left" && <PlaceholderImage className="w-[140px] shrink-0" />}
       <div className="flex min-w-0 flex-1 flex-col">
-        <div className={cn("flex flex-col gap-1 p-4", content === "input" && "border-b border-[color-mix(in_srgb,var(--text-muted)_24%,transparent)] py-3")}>
+        <div className={cn("flex flex-col gap-1 p-4", content === "input" && isExpanded && "border-b border-[color-mix(in_srgb,var(--text-muted)_24%,transparent)] py-3")}>
           <div className="flex flex-col gap-3.5">
             {titleRow}
-            {content === "description" && <div className="h-px w-full bg-[var(--stroke-subtle)]" />}
-            {content === "description" && description && <p className="m-0 font-body text-sm text-[var(--text-muted)]">{description}</p>}
+            {content === "description" && isExpanded && <div className="h-px w-full bg-[var(--stroke-subtle)]" />}
+            {content === "description" && isExpanded && description && <p className="m-0 font-body text-sm text-[var(--text-muted)]">{description}</p>}
           </div>
         </div>
-        {content === "pills" && pills && (
+        {content === "pills" && isExpanded && pills && (
           <div className="flex flex-wrap gap-2 p-4 pt-0">
             {pills.map(p => (
               <Pill key={p.label} icon={p.icon} selected={p.selected}>{p.label}</Pill>
             ))}
           </div>
         )}
-        {content === "input" && (
+        {content === "input" && isExpanded && (
           <div className="p-4">
             <div className="rounded-md border-[1.5px] border-[var(--stroke-muted)] bg-[var(--surface-canvas)] p-3 shadow-[0_1px_2px_rgba(25,25,28,0.04)]">
               <textarea readOnly placeholder={textAreaPlaceholder} rows={3} className="w-full resize-none bg-transparent font-body text-sm text-[var(--text-subtle)] outline-none placeholder:text-[var(--text-subtle)]" />
