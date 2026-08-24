@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Nunito_Sans, Paytone_One } from "next/font/google";
 import { headers } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { AppShell } from "@/components/app-shell";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${heading.variable} ${body.variable} ${mono.variable}`}>
         <AppShell>{children}</AppShell>
+        <Analytics />
       </body>
     </html>
   );

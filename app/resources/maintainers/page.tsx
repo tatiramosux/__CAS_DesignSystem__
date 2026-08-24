@@ -10,14 +10,16 @@ const maintainers = [
     initials: "TR",
     name: "Tati Ramos",
     subtitle: "UX / UI Designer",
-    description: "Design system lead, connecting design to development.",
+    description: "Design system lead, connecting design to development. An expert in building scale, modular systems that drive consistency and collaboration.",
+    manages: "GO Flow",
     email: "tatiane.r@casautomotive.com",
   },
   {
     initials: "FM",
     name: "Fabio Marques",
     subtitle: "UX / UI Designer",
-    description: "Design System advocate, specializing in transforming platforms into high-impact experiences.",
+    description: "Design System advocate, specializing in transforming platforms into high-impact experiences with innovation.",
+    manages: "Templates",
     email: "fabio.m@casautomotive.com",
   },
 ];
@@ -36,6 +38,10 @@ export default function MaintainersPage() {
                 <span style={{ display: "block", color: "var(--text-muted)", fontSize: 12, marginTop: 2 }}>{person.subtitle}</span>
               </div>
               <p style={{ margin: 0, color: "var(--text-muted)", fontSize: 13, lineHeight: 1.55 }}>{person.description}</p>
+              <div>
+                <span style={{ display: "block", color: "var(--text-strong)", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: ".04em" }}>Manage</span>
+                <span style={{ display: "block", color: "var(--action)", fontSize: 13, fontWeight: 700, marginTop: 2 }}>{person.manages}</span>
+              </div>
               <a href={teamsChatLink(person.email)} target="_blank" rel="noreferrer" className="resource-row" style={{ marginTop: "auto", justifyContent: "center" }}>
                 <b>Contact via Teams <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></b>
               </a>
